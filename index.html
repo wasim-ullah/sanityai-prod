@@ -69,8 +69,8 @@
     <div data-nav-links="true" style="display: flex; gap: clamp(14px, 2.5vw, 28px); font-size: 13px; color: #6e6e68;">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
+      <a href="#work">Work</a>
       <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
     </div>
     <a href="https://cal.com/wasim/sanity" target="_blank" data-mobile-cta="true" style="background: #0a0a0a; color: #f5f5f2; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 999px; display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0;">Book a call</a>
    </div>
@@ -267,6 +267,32 @@
             <div>
               <div style="font-size: 14px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 4px;">{{ step.title }}</div>
               <div style="font-size: 13px; line-height: 1.55; color: #6e6e68;">{{ step.desc }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case studies -->
+  <section id="work" data-screen-label="Work" style="background: #0a0a0a; color: #f2f2ee; margin-top: 40px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 40px);">
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #8f8f89; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: #e8541e; display: inline-block;"></span>Selected work</div>
+      <h2 style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 12px; max-width: 640px;">Systems we've shipped.</h2>
+      <p style="font-size: 14px; line-height: 1.6; color: #a5a59f; margin: 0 0 44px; max-width: 480px; text-wrap: pretty;">A sample of the automation and growth work we've built — in our own products and for clients across the region.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(12px, 1.6vw, 20px);">
+        <sc-for list="{{ cases }}" as="c" hint-placeholder-count="4">
+          <div style="background: #141412; border: 1px solid #26261f; border-radius: 16px; padding: 30px 30px 32px; display: flex; flex-direction: column;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px;">
+              <span style="font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #e8541e;">{{ c.kicker }}</span>
+              <span style="font-size: 12px; color: #6e6e66; font-family: monospace;">{{ c.num }}</span>
+            </div>
+            <div style="font-size: 20px; font-weight: 600; letter-spacing: -.01em; line-height: 1.22; margin-bottom: 12px;">{{ c.title }}</div>
+            <div style="font-size: 14px; line-height: 1.6; color: #a5a59f; margin-bottom: 24px; text-wrap: pretty;">{{ c.body }}</div>
+            <div style="margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px;">
+              <sc-for list="{{ c.tags }}" as="t" hint-placeholder-count="3">
+                <span style="font-size: 12px; padding: 6px 14px; border-radius: 999px; background: #221f1a; color: #c9c4bb;">{{ t }}</span>
+              </sc-for>
             </div>
           </div>
         </sc-for>
@@ -587,9 +613,9 @@ class Component extends DCLogic {
     const dark = { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f2f2ee', muted: '#8f8f89', btnBg: '#f2f2ee', btnFg: '#0a0a0a', btnBorder: '#f2f2ee' };
     const light = { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', btnBg: 'transparent', btnFg: '#141414', btnBorder: '#c9c9c4' };
     const plans = [
-      { ...light, label: 'Audit', price: 'AED 6,500', per: 'one-time · 2 weeks', desc: 'The full map of your funnel, stack, and automation opportunities — with a build plan you can run anywhere.', features: ['Stack & funnel audit', 'Automation opportunity map', 'Costed 90-day roadmap', 'Credited toward a build'], cta: 'Start with an audit' },
-      { ...dark, label: 'Build', price: 'AED 20,000', per: 'per month · 3-month min.', desc: 'The core engagement. We design, build, and run your automation and marketing system end to end.', features: ['Dedicated pod: strategist, builder, marketer', 'Weekly shipped increments', 'CRM, lifecycle, paid & content', 'Live revenue dashboard'], cta: 'Book a call' },
-      { ...light, label: 'Retainer', price: 'AED 8,000', per: 'per month', desc: 'Post-handover: optimization, new workflows, and campaign support without a full pod.', features: ['Monthly optimization sprints', 'New automation requests', 'Quarterly system review', 'Slack-level response times'], cta: 'Book a call' },
+      { ...light, label: 'Audit', price: '$3,000', per: 'one-time · 2 weeks', desc: 'The full map of your funnel, stack, and automation opportunities — with a build plan you can run anywhere.', features: ['Stack & funnel audit', 'Automation opportunity map', 'Costed 90-day roadmap', 'Credited toward a build'], cta: 'Start with an audit' },
+      { ...dark, label: 'Build', price: '$8,000', per: 'per month · 3-month min.', desc: 'The core engagement. We design, build, and run your automation and marketing system end to end.', features: ['Dedicated pod: strategist, builder, marketer', 'Weekly shipped increments', 'CRM, lifecycle, paid & content', 'Live revenue dashboard'], cta: 'Book a call' },
+      { ...light, label: 'Retainer', price: '$5,000', per: 'per month', desc: 'Post-handover: optimization, new workflows, and campaign support without a full pod.', features: ['Monthly optimization sprints', 'New automation requests', 'Quarterly system review', 'Slack-level response times'], cta: 'Book a call' },
     ];
     const faqData = [
       { q: 'Who is this for?', a: 'Most companies with a working product and a real sales motion — typically SaaS, professional services, and mid-market ops teams. If you\'re pre-revenue, start with the audit only.' },
@@ -604,7 +630,13 @@ class Component extends DCLogic {
       mark: this.state.openFaq === i ? '−' : '+',
       toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })),
     }));
-    return { docFont, leftBars, rightBars, closerBars, sideItems, heroMock, stackLogos, features, steps, plans, faqs };
+    const cases = [
+      { num: '01', kicker: 'In-house product', title: 'hint.fyi — a generative engine optimization platform', body: 'Our own team designed and built hint.fyi, a tool that surfaces, tracks, and resolves the issues that hurt how brands show up inside large language models — turning LLM optimization from guesswork into something you can actually measure and fix.', tags: ['GEO / LLMO', 'Monitoring', 'Product build'] },
+      { num: '02', kicker: 'Voice automation', title: 'End-to-end inbound & outbound call automation', body: 'For a Dubai business we built a full voice automation layer handling both inbound and outbound calls — freeing the team from repetitive conversations while lifting how consistently and quickly customers get engaged.', tags: ['Voice AI', 'Customer engagement', 'Dubai'] },
+      { num: '03', kicker: 'Paid media', title: 'More qualified leads at a stronger ROI through the downturn', body: 'While budgets tightened during the market slowdown, we restructured paid campaigns around pipeline signals rather than clicks — pulling in better-qualified leads and stretching every dirham of spend further when it mattered most.', tags: ['Paid media', 'ROI', 'Lead quality'] },
+      { num: '04', kicker: 'Messaging automation', title: 'Intelligent WhatsApp support wired into the whole stack', body: 'We created a smart WhatsApp automation that answers customer queries on its own and connects across the business\u2019s internal tools — so conversations, data, and actions all stay in sync instead of living in a silo.', tags: ['WhatsApp', 'Support automation', 'Integrations'] },
+    ];
+    return { docFont, leftBars, rightBars, closerBars, sideItems, heroMock, stackLogos, features, steps, plans, cases, faqs };
   }
 }
 </script>
