@@ -46,9 +46,8 @@
   html[data-past-hero] [data-mobile-cta] { display: inline-flex !important; }
   @media (max-width: 640px) {
     [data-mobile-cta] { display: none !important; }
-    [data-nav-inner] { flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
-    [data-nav-links] { width: 100%; order: 2; justify-content: center; gap: 20px; font-size: 12.5px; }
-    html[data-past-hero] [data-nav-inner] { flex-wrap: nowrap; }
+    [data-nav-inner] { flex-wrap: nowrap; justify-content: space-between; gap: 12px; }
+    [data-nav-links] { justify-content: flex-end; gap: 16px; font-size: 12.5px; flex-shrink: 1; }
   }
   #__bundler_err { display: none !important; }
 </style>

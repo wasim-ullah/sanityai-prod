@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0a0a0a"></rect><rect x="35" y="35" width="30" height="30" fill="#e8541e"></rect></svg></template>
+<title>SanityAI — Introduction</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #0a0a0a; font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #777; }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" style="font-family: {{ docFont }};">
+
+  <!-- 1 Cover -->
+  <section data-document-role="page" data-label="Cover" data-speaker-notes="Send-ahead intro — no editing needed." style="background: #0a0a0a; color: #f2f2ee; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="position: absolute; inset: 0; display: flex; justify-content: flex-end; gap: 12px; padding-right: 60px;">
+      <sc-for list="{{ coverBars }}" as="b" hint-placeholder-count="14">
+        <div style="width: 5px; height: {{ b.h }}%; background: #e8541e; opacity: {{ b.o }}; align-self: flex-end;"></div>
+      </sc-for>
+    </div>
+    <img src="uploads/logoblack.png" alt="SanityAI" style="position: relative; height: 26px; filter: invert(1); align-self: flex-start;">
+    <div style="position: relative;">
+      <div style="display: flex; align-items: center; gap: 14px; font-size: 24px; color: #8f8f89; margin-bottom: 28px;"><span style="width: 14px; height: 14px; background: #e8541e; display: inline-block;"></span>AN INTRODUCTION</div>
+      <h1 style="font-size: 96px; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; margin: 0; max-width: 1350px;">Automation &amp; marketing systems for teams that want to scale up.</h1>
+    </div>
+    <div style="position: relative; display: flex; justify-content: space-between; font-size: 24px; color: #8f8f89;">
+      <span>The agency behind your growth engine</span>
+      <span style="font-family: monospace; font-size: 22px;">sanity.ai</span>
+    </div>
+  </section>
+
+  <!-- 2 The problem -->
+  <section data-document-role="page" data-label="The leak" style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>THE PROBLEM</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px; max-width: 1100px;">Revenue leaks between your tools, not inside them.</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; flex: 1;">
+      <sc-for list="{{ problems }}" as="p" hint-placeholder-count="4">
+        <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 40px; display: flex; flex-direction: column; gap: 20px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #0a0a0a; color: #f5f5f2; font-size: 22px; display: flex; align-items: center; justify-content: center;">{{ p.n }}</div>
+          <div style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">{{ p.t }}</div>
+          <div style="font-size: 22px; line-height: 1.5; color: #6e6e68;">{{ p.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 3 What we build -->
+  <section data-document-role="page" data-label="What we build" style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>WHAT WE BUILD</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px;">One growth engine. Three layers.</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; flex: 1;">
+      <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+        <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 48px 44px; display: flex; flex-direction: column;">
+          <div style="width: 14px; height: 14px; background: #e8541e; margin-bottom: 28px;"></div>
+          <div style="font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.18; margin-bottom: 18px;">{{ p.t }}</div>
+          <div style="font-size: 23px; line-height: 1.5; color: #6e6e68; margin-bottom: 32px;">{{ p.d }}</div>
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-top: auto;">
+            <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="3">
+              <div style="font-size: 22px; display: flex; gap: 16px; align-items: baseline;"><span style="color: #e8541e;">—</span><span>{{ it }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 4 One system -->
+  <section data-document-role="page" data-label="How it fits together" style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>HOW IT FITS TOGETHER</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 72px; max-width: 1250px;">Every lead runs the same path — automatically.</h2>
+    <div style="display: flex; align-items: center; gap: 20px; flex: 1;">
+      <sc-for list="{{ flowStages }}" as="st" hint-placeholder-count="6">
+        <div style="display: flex; align-items: center; gap: 20px; flex: 1;">
+          <div style="border: 1px solid #e4e4df; background: #ffffff; border-radius: 16px; padding: 34px 30px; display: flex; flex-direction: column; gap: 10px; flex: 1;">
+            <span style="font-size: 27px; font-weight: 600; letter-spacing: -.01em;">{{ st.t }}</span>
+            <span style="font-size: 19px; font-family: monospace; color: #9a9a94;">{{ st.sub }}</span>
+          </div>
+          <sc-if value="{{ st.arrow }}" hint-placeholder-val="{{ false }}"><span style="color: #e8541e; font-size: 30px;">→</span></sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 72px;">
+      <div style="font-size: 20px; letter-spacing: .08em; text-transform: uppercase; color: #9a9a94; margin-bottom: 24px;">Built in the tools you already run</div>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <sc-for list="{{ stackNames }}" as="s" hint-placeholder-count="10">
+          <div style="font-size: 22px; padding: 12px 28px; border-radius: 999px; background: #f0f0eb; color: #55554f;">{{ s }}</div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 Process -->
+  <section data-document-role="page" data-label="Process" style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>HOW IT RUNS</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px;">Audit the funnel. Then put it on autopilot.</h2>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; flex: 1;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+        <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 40px; display: flex; flex-direction: column; gap: 18px;">
+          <div style="width: 44px; height: 44px; border-radius: 50%; background: #0a0a0a; color: #f5f5f2; font-size: 22px; display: flex; align-items: center; justify-content: center;">{{ s.n }}</div>
+          <div style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">{{ s.t }}</div>
+          <div style="font-size: 22px; line-height: 1.5; color: #6e6e68;">{{ s.d }}</div>
+          <div style="font-size: 20px; color: #9a9a94; font-family: monospace; margin-top: auto;">{{ s.time }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 6 Why different -->
+  <section data-document-role="page" data-label="Why it's different" style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>WHY IT'S DIFFERENT</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px; max-width: 1250px;">Agencies ship campaigns. We ship the machinery.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1;">
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 48px 52px; display: flex; flex-direction: column; gap: 26px;">
+        <div style="font-size: 22px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">A typical agency</div>
+        <sc-for list="{{ agencyRows }}" as="r" hint-placeholder-count="4">
+          <div style="font-size: 25px; line-height: 1.45; color: #6e6e68; display: flex; gap: 18px; align-items: baseline;"><span style="color: #c9c9c4;">—</span><span>{{ r }}</span></div>
+        </sc-for>
+      </div>
+      <div style="background: #0a0a0a; color: #f2f2ee; border-radius: 20px; padding: 48px 52px; display: flex; flex-direction: column; gap: 26px;">
+        <div style="font-size: 22px; letter-spacing: .06em; text-transform: uppercase; color: #8f8f89;">SanityAI</div>
+        <sc-for list="{{ usRows }}" as="r" hint-placeholder-count="4">
+          <div style="font-size: 25px; line-height: 1.45; display: flex; gap: 18px; align-items: baseline;"><span style="color: #e8541e;">—</span><span>{{ r }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 Engagements -->
+  <section data-document-role="page" data-label="Engagements" style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>ENGAGEMENTS</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 64px;">Start small. Own everything.</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; flex: 1;">
+      <sc-for list="{{ plans }}" as="p" hint-placeholder-count="3">
+        <div style="border: 1px solid {{ p.border }}; background: {{ p.bg }}; color: {{ p.fg }}; border-radius: 20px; padding: 48px 44px; display: flex; flex-direction: column;">
+          <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: {{ p.muted }}; margin-bottom: 24px;">{{ p.label }}</div>
+          <div style="font-size: 48px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 6px;">{{ p.price }}</div>
+          <div style="font-size: 21px; color: {{ p.muted }}; margin-bottom: 30px;">{{ p.per }}</div>
+          <div style="font-size: 22px; line-height: 1.5; color: {{ p.muted }}; margin-bottom: 34px;">{{ p.desc }}</div>
+          <div style="display: flex; flex-direction: column; gap: 16px; margin-top: auto;">
+            <sc-for list="{{ p.features }}" as="f" hint-placeholder-count="4">
+              <div style="font-size: 22px; display: flex; gap: 16px; align-items: baseline;"><span style="color: #e8541e;">—</span><span>{{ f }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 8 FAQ -->
+  <section data-document-role="page" data-label="Common questions" style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>COMMON QUESTIONS</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px;">Questions, answered.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1;">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="4">
+        <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 40px 44px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="font-size: 28px; font-weight: 600; letter-spacing: -.01em;">{{ f.q }}</div>
+          <div style="font-size: 22px; line-height: 1.55; color: #6e6e68;">{{ f.a }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 9 Closer -->
+  <section data-document-role="page" data-label="Next step" style="background: #0a0a0a; color: #f2f2ee; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="position: absolute; inset: 0; display: flex; justify-content: flex-end; gap: 12px; padding-right: 60px;">
+      <sc-for list="{{ coverBars }}" as="b" hint-placeholder-count="14">
+        <div style="width: 5px; height: {{ b.h }}%; background: #e8541e; opacity: {{ b.o }}; align-self: flex-end;"></div>
+      </sc-for>
+    </div>
+    <div style="position: relative; max-width: 1300px;">
+      <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #8f8f89; margin-bottom: 28px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>NEXT STEP</div>
+      <h2 style="font-size: 84px; font-weight: 600; letter-spacing: -.03em; line-height: 1.08; margin: 0 0 40px;">Bring us your funnel. We'll show you where the automation is hiding — on the first call.</h2>
+      <div style="display: flex; gap: 28px; align-items: center;">
+        <a href="https://cal.com/wasim/sanity" target="_blank" style="background: #f2f2ee; color: #0a0a0a; font-size: 26px; font-weight: 500; padding: 22px 48px; border-radius: 999px;">Book a call →</a>
+        <span style="font-size: 24px; color: #a5a59f; font-family: monospace;">cal.com/wasim/sanity · wasim@sanity.ai · sanity.ai</span>
+      </div>
+    </div>
+  </section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;fontFamily&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Instrument Sans&quot;, &quot;System&quot;], &quot;default&quot;: &quot;Instrument Sans&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Typography&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const docFont = (this.props.fontFamily ?? 'Instrument Sans') === 'Instrument Sans'
+      ? '"Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif'
+      : '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif';
+    const mkBars = (n, seed) => {
+      const arr = [];
+      for (let i = 0; i < n; i++) arr.push({ h: Math.round((35 + ((i * seed) % 60)) * 0.7), o: 0.25 + ((i * 29) % 60) / 100 });
+      return arr;
+    };
+    const flow = [
+      ['Lead comes in', 'form · ad · referral'],
+      ['Enriched', 'company, role, intent'],
+      ['Scored', 'fit + behavior'],
+      ['Routed', 'to the right owner'],
+      ['Sequenced', 'day 0\u201314 follow-up'],
+      ['Reported', 'one revenue dashboard'],
+    ];
+    return {
+      docFont,
+      coverBars: mkBars(14, 19),
+      problems: [
+        { n: '1', t: 'Leads nobody owns', d: 'Demo requests sit in shared inboxes while intent cools.' },
+        { n: '2', t: 'Follow-up by memory', d: 'Sequences live in reps\u2019 heads, not in the system.' },
+        { n: '3', t: 'CRM nobody trusts', d: 'Half-filled fields make every report an argument.' },
+        { n: '4', t: 'Spend flying blind', d: 'Paid budgets scale on clicks, not closed pipeline.' },
+      ],
+      pillars: [
+        { t: 'Marketing automation & CRM', d: 'Lifecycle flows that nurture, score, and route \u2014 automatically.', items: ['Lead scoring & routing', 'Lifecycle sequences', 'CRM hygiene on autopilot'] },
+        { t: 'Workflow & ops automation', d: 'AI agents that clear the manual work between your tools \u2014 with logging and human checkpoints.', items: ['Enrichment & triage agents', 'Tool-to-tool integrations', 'Documented runbooks'] },
+        { t: 'Demand & analytics', d: 'Paid, content, and SEO wired straight to revenue data.', items: ['Full-funnel attribution', 'Paid media management', 'One live revenue dashboard'] },
+      ],
+      flowStages: flow.map((s, i) => ({ t: s[0], sub: s[1], arrow: i < flow.length - 1 })),
+      stackNames: ['HubSpot', 'Salesforce', 'Marketo', 'Clay', 'Zapier', 'Make', 'n8n', 'Segment', 'Google Ads', 'LinkedIn', 'GA4', 'Slack', 'Claude'],
+      steps: [
+        { n: '1', t: 'Audit', d: 'Two weeks inside your stack and pipeline. We map what runs, what leaks, and a costed build plan.', time: 'weeks 1\u20132' },
+        { n: '2', t: 'Build', d: 'The core system shipped in weekly increments, live in your accounts from day one.', time: 'months 1\u20133' },
+        { n: '3', t: 'Prove', d: 'Every workflow reports to one dashboard, held against revenue \u2014 not vanity metrics.', time: 'continuous' },
+        { n: '4', t: 'Hand over', d: 'Documentation, training, runbooks. Your team owns the system.', time: 'month 3+' },
+      ],
+      agencyRows: [
+        'Ships campaigns, keeps the machinery',
+        'Builds in their accounts, not yours',
+        'Reports on clicks and impressions',
+        'The dependency grows every quarter',
+      ],
+      usRows: [
+        'Ships the machinery behind the campaigns',
+        'Builds in your accounts \u2014 you own every asset',
+        'Reports on pipeline and closed revenue',
+        'Handover is part of the plan, not a threat',
+      ],
+      plans: [
+        { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', label: 'Audit', price: 'AED 6,500', per: 'one-time \u00b7 2 weeks', desc: 'The full map of your funnel, stack, and automation opportunities \u2014 a build plan you can run anywhere.', features: ['Stack & funnel audit', 'Automation opportunity map', 'Costed 90-day roadmap', 'Credited toward a build'] },
+        { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f2f2ee', muted: '#8f8f89', label: 'Build', price: 'AED 20,000', per: 'per month \u00b7 3-month min.', desc: 'The core engagement. We design, build, and run your automation and marketing system end to end.', features: ['Dedicated pod of three', 'Weekly shipped increments', 'CRM, lifecycle, paid & content', 'Live revenue dashboard'] },
+        { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', label: 'Retainer', price: 'AED 8,000', per: 'per month', desc: 'Post-handover: optimization, new workflows, and campaign support without a full pod.', features: ['Monthly optimization sprints', 'New automation requests', 'Quarterly system review', 'Slack-level response times'] },
+      ],
+      faqs: [
+        { q: 'Who is this for?', a: 'Companies with a working product and a real sales motion \u2014 typically B2B SaaS, professional services, and mid-market ops teams of 20\u2013200 people.' },
+        { q: 'What tools do you work in?', a: 'HubSpot, Salesforce, Marketo, Clay, Zapier/Make, n8n, Segment, and the major ad platforms. We build in your accounts \u2014 you own every asset from day one.' },
+        { q: 'How fast do we see results?', a: 'Automation wins \u2014 routing, follow-up, hygiene \u2014 land in the first 2\u20133 weeks. Pipeline impact from demand work typically shows within one quarter.' },
+        { q: 'Do you use AI agents?', a: 'Where they beat a deterministic workflow: enrichment, drafting, triage. Every agent runs with logging and human checkpoints. No black boxes in your revenue path.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
