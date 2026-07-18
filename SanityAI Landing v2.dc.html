@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0a0a0a"></rect><rect x="35" y="35" width="30" height="30" fill="#e8541e"></rect></svg></template>
+<title>SanityAI - Automation &amp; marketing systems</title>
+<meta name="description" content="SanityAI is the agency behind your growth engine — CRM, lifecycle, paid, and AI-powered ops automation, built as one system your team ends up owning.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SanityAI - Automation &amp; marketing systems">
+<meta property="og:description" content="SanityAI is the agency behind your growth engine — CRM, lifecycle, paid, and AI-powered ops automation, built as one system your team ends up owning.">
+<meta property="og:image" content="uploads/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="uploads/og-share.jpg">
+<link rel="icon" type="image/png" href="uploads/icon copy.png">
+<link rel="apple-touch-icon" href="uploads/icon copy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fbfbfa; font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #777; }
+  @keyframes marqueeR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @keyframes rowIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+  @keyframes barGrow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+  @keyframes pulseDot { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+  @keyframes floatNum { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+  [data-scroll-row] { scrollbar-width: none; }
+  [data-scroll-row]::-webkit-scrollbar { display: none; }
+  [data-nav-inner] { transition: justify-content .3s ease, gap .3s ease; }
+  html[data-past-hero] [data-nav-inner] { justify-content: center !important; gap: 22px !important; }
+  html[data-past-hero] [data-nav-links] { display: none !important; }
+  html[data-past-hero] [data-mobile-cta] { display: inline-flex !important; }
+  @media (max-width: 640px) {
+    [data-mobile-cta] { display: none !important; }
+    [data-nav-inner] { flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
+    [data-nav-links] { width: 100%; order: 2; justify-content: center; gap: 20px; font-size: 12.5px; }
+    html[data-past-hero] [data-nav-inner] { flex-wrap: nowrap; }
+  }
+  #__bundler_err { display: none !important; }
+</style>
+</helmet>
+
+<div style="background: #fbfbfa; color: #141414; font-family: {{ docFont }};">
+
+  <!-- Announcement bar -->
+  <div style="background: #0a0a0a; color: #d8d8d4; font-size: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 9px 16px;">
+    <span>SanityAI is now taking Q3 engagements</span>
+    <span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>
+    <a href="#contact" style="color: #d8d8d4;">→</a>
+  </div>
+
+  <!-- Nav -->
+  <nav style="position: sticky; top: 0; z-index: 50; background: rgba(245,245,242,.82); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid rgba(10,10,10,.06);">
+   <div data-nav-inner="true" style="max-width: 1200px; margin: 0 auto; padding: 14px clamp(20px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="#" style="display: flex; align-items: center;"><img src="uploads/logoblack.png" alt="SanityAI" style="height: 13px; display: block;"></a>
+    <div data-nav-links="true" style="display: flex; gap: clamp(14px, 2.5vw, 28px); font-size: 13px; color: #6e6e68;">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="https://cal.com/wasim/sanity" target="_blank" data-mobile-cta="true" style="background: #0a0a0a; color: #f5f5f2; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 999px; display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0;">Book a call</a>
+   </div>
+  </nav>
+
+  <!-- HERO -->
+  <section data-screen-label="Hero" style="max-width: 1200px; margin: 0 auto; padding: clamp(40px, 7vw, 72px) clamp(20px, 4vw, 40px) 0;">
+    <h1 style="font-size: clamp(32px, 5.4vw, 52px); line-height: 1.08; font-weight: 600; letter-spacing: -.03em; margin: 0 0 22px; max-width: 640px;">Automation &amp; marketing systems for teams that want to scale up.</h1>
+    <p style="font-size: 16px; line-height: 1.55; color: #6e6e68; margin: 0 0 30px; max-width: 460px; text-wrap: pretty;">SanityAI is the agency behind your growth engine — CRM, lifecycle, paid, and AI-powered ops automation, built as one system your team ends up owning.</p>
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+      <a href="https://cal.com/wasim/sanity" target="_blank" style="background: #0a0a0a; color: #f5f5f2; font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 999px; display: inline-flex; gap: 8px; align-items: center;">Book a demo <span>→</span></a>
+      <a href="#services" style="font-size: 14px; color: #444440; border: 1px solid #d8d8d3; padding: 11px 22px; border-radius: 999px;">View services</a>
+    </div>
+  </section>
+
+  <!-- Bar field + dashboard mock -->
+  <section data-screen-label="Hero visual" style="position: relative; margin-top: 56px; padding: 48px 0 72px; overflow: hidden;">
+    <div style="position: absolute; inset: 0; display: flex; justify-content: space-between; align-items: stretch;">
+      <div style="display: flex; gap: 7px; align-items: flex-start; height: 100%;">
+        <sc-for list="{{ leftBars }}" as="b" hint-placeholder-count="16">
+          <div style="width: 3px; height: {{ b.h }}%; background: #141414; opacity: {{ b.o }};"></div>
+        </sc-for>
+      </div>
+      <div style="display: flex; gap: 7px; align-items: flex-end; height: 100%;">
+        <sc-for list="{{ rightBars }}" as="b" hint-placeholder-count="16">
+          <div style="width: 3px; height: {{ b.h }}%; background: #e8541e; opacity: {{ b.o }};"></div>
+        </sc-for>
+      </div>
+    </div>
+    <!-- dashboard mock -->
+    <div style="position: relative; width: min(880px, calc(100% - 40px)); margin: 0 auto; background: #ffffff; border: 1px solid #e4e4df; border-radius: 12px; box-shadow: 0 24px 60px rgba(20,20,20,.10); overflow: hidden;">
+      <div style="display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid #eeeee9;">
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+        <span style="margin-left: 12px; font-size: 11px; color: #9a9a94; font-family: monospace;">SANITYAI · {{ heroMock.label }}</span>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(130px, 170px) 1fr;">
+        <div style="border-right: 1px solid #eeeee9; padding: 14px 10px; display: flex; flex-direction: column; gap: 3px;">
+          <sc-for list="{{ sideItems }}" as="s" hint-placeholder-count="7">
+            <button onClick="{{ s.select }}" style="all: unset; box-sizing: border-box; cursor: pointer; font-family: inherit; font-size: 11.5px; font-weight: {{ s.w }}; color: {{ s.c }}; background: {{ s.itemBg }}; border-radius: 6px; padding: 7px 9px; display: flex; align-items: center; gap: 8px; width: 100%;">
+              <span style="width: 6px; height: 6px; background: {{ s.dot }}; display: inline-block; border-radius: 2px; flex-shrink: 0;"></span>{{ s.t }}
+            </button>
+          </sc-for>
+        </div>
+        <div style="padding: 20px 24px 24px; height: clamp(300px, 42vw, 340px); overflow-y: auto; box-sizing: border-box;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)); gap: 14px 20px; margin-bottom: 20px;">
+            <sc-for list="{{ heroMock.metrics }}" as="m" hint-placeholder-count="4">
+              <div style="animation: floatNum 5s ease-in-out {{ m.d }} infinite;"><div style="font-size: 19px; font-weight: 600; letter-spacing: -.02em; color: {{ m.c }};">{{ m.v }}</div><div style="font-size: 10.5px; color: #9a9a94;">{{ m.l }}</div></div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ heroMock.isBars }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: flex-end; gap: 3px; height: 118px; border-bottom: 1px solid #eeeee9;">
+              <sc-for list="{{ heroMock.bars }}" as="c" hint-placeholder-count="0">
+                <div style="flex: 1; height: {{ c.h }}%; background: {{ c.bg }}; border-radius: 2px 2px 0 0; transform-origin: bottom; animation: barGrow .7s cubic-bezier(.2,.7,.3,1) {{ c.d }} backwards;"></div>
+              </sc-for>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 9.5px; color: #b4b4ae; padding-top: 8px; font-family: monospace;">
+              <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ heroMock.isRows }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column;">
+              <sc-for list="{{ heroMock.rows }}" as="r" hint-placeholder-count="0">
+                <div style="display: grid; grid-template-columns: 1fr auto minmax(64px, auto); gap: 14px; align-items: center; padding: 9px 0; border-top: 1px solid #f0f0eb; font-size: 11.5px; animation: rowIn .5s ease {{ r.d }} backwards;">
+                  <span style="color: #444440; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ r.a }}</span>
+                  <span style="font-size: 10px; padding: 2px 9px; border-radius: 999px; background: {{ r.pillBg }}; color: {{ r.pillFg }};">{{ r.pill }}</span>
+                  <span style="color: #9a9a94; font-family: monospace; font-size: 10px; text-align: right;">{{ r.b }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ heroMock.isFlow }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 14px 0;">
+              <sc-for list="{{ heroMock.stages }}" as="st" hint-placeholder-count="0">
+                <div style="display: flex; align-items: center; gap: 8px; animation: rowIn .5s ease {{ st.d }} backwards;">
+                  <div style="border: 1px solid {{ st.border }}; background: {{ st.bg }}; color: {{ st.fg }}; border-radius: 8px; padding: 8px 11px; display: flex; flex-direction: column; gap: 2px;">
+                    <span style="font-size: 11px; font-weight: 600;">{{ st.t }}</span>
+                    <span style="font-size: 9px; font-family: monospace; color: {{ st.subC }};">{{ st.sub }}</span>
+                  </div>
+                  <sc-if value="{{ st.arrow }}" hint-placeholder-val="{{ false }}"><span style="color: #c9c9c4; font-size: 12px; animation: pulseDot 1.6s ease-in-out {{ st.d }} infinite;">→</span></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo strip -->
+  <section style="padding: 12px 0 72px; overflow: hidden;">
+    <div style="text-align: center; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9a9a94; margin-bottom: 28px;">OUR TECHNOLOGY STACK</div>
+    <div style="display: flex; width: max-content; gap: 56px; align-items: center; animation: marqueeR 40s linear infinite;">
+      <sc-for list="{{ stackLogos }}" as="tool" hint-placeholder-count="0">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <sc-if value="{{ tool.hasIcon }}" hint-placeholder-val="{{ false }}">
+            <svg viewBox="0 0 24 24" width="18" height="18" style="flex-shrink: 0;"><path d="{{ tool.path }}" fill="#82827c"></path></svg>
+          </sc-if>
+          <span style="font-size: 13px; font-weight: 500; color: #82827c; white-space: nowrap;">{{ tool.name }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Feature sections -->
+  <div id="services"></div>
+  <sc-for list="{{ features }}" as="feat" hint-placeholder-count="3">
+    <section data-screen-label="Feature" style="max-width: 1040px; margin: 0 auto; padding: 64px clamp(20px, 4vw, 40px);">
+      <div style="max-width: 480px; margin-bottom: 32px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: #e8541e; display: inline-block;"></span>{{ feat.eyebrow }}</div>
+        <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 14px;">{{ feat.title }}</h2>
+        <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0; text-wrap: pretty;">{{ feat.desc }}</p>
+      </div>
+      <div data-scroll-row="true" style="display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 18px; padding-bottom: 2px;">
+        <sc-for list="{{ feat.tabs }}" as="tab" hint-placeholder-count="5">
+          <button onClick="{{ tab.select }}" style="all: unset; box-sizing: border-box; cursor: pointer; font-family: inherit; font-size: 12px; padding: 7px 14px; border-radius: 999px; white-space: nowrap; flex-shrink: 0; border: 1px solid {{ tab.border }}; background: {{ tab.bg }}; color: {{ tab.fg }}; font-weight: 500;">{{ tab.t }}</button>
+        </sc-for>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 12px; overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid #eeeee9;">
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+          <span style="margin-left: 12px; font-size: 11px; color: #9a9a94; font-family: monospace;">SANITYAI · {{ feat.active.label }}</span>
+        </div>
+        <div style="padding: 20px 24px 24px; min-height: 250px; box-sizing: border-box;">
+          <div style="display: flex; gap: 34px; margin-bottom: 20px; flex-wrap: wrap;">
+            <sc-for list="{{ feat.active.metrics }}" as="m" hint-placeholder-count="3">
+              <div style="animation: floatNum 5s ease-in-out {{ m.d }} infinite;"><div style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: {{ m.c }};">{{ m.v }}</div><div style="font-size: 10.5px; color: #9a9a94;">{{ m.l }}</div></div>
+            </sc-for>
+          </div>
+          <sc-if value="{{ feat.active.isBars }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: flex-end; gap: 3px; height: 132px; border-bottom: 1px solid #eeeee9;">
+              <sc-for list="{{ feat.active.bars }}" as="c" hint-placeholder-count="0">
+                <div style="flex: 1; height: {{ c.h }}%; background: {{ c.bg }}; border-radius: 2px 2px 0 0; transform-origin: bottom; animation: barGrow .7s cubic-bezier(.2,.7,.3,1) {{ c.d }} backwards;"></div>
+              </sc-for>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 9.5px; color: #b4b4ae; padding-top: 8px; font-family: monospace;">
+              <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ feat.active.isRows }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column;">
+              <sc-for list="{{ feat.active.rows }}" as="r" hint-placeholder-count="0">
+                <div style="display: grid; grid-template-columns: 1fr auto minmax(70px, auto); gap: 16px; align-items: center; padding: 10px 0; border-top: 1px solid #f0f0eb; font-size: 11.5px; animation: rowIn .5s ease {{ r.d }} backwards;">
+                  <span style="color: #444440; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ r.a }}</span>
+                  <span style="font-size: 10px; padding: 2px 9px; border-radius: 999px; background: {{ r.pillBg }}; color: {{ r.pillFg }};">{{ r.pill }}</span>
+                  <span style="color: #9a9a94; font-family: monospace; font-size: 10px; text-align: right;">{{ r.b }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ feat.active.isFlow }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 22px 0;">
+              <sc-for list="{{ feat.active.stages }}" as="st" hint-placeholder-count="0">
+                <div style="display: flex; align-items: center; gap: 8px; animation: rowIn .5s ease {{ st.d }} backwards;">
+                  <div style="border: 1px solid {{ st.border }}; background: {{ st.bg }}; color: {{ st.fg }}; border-radius: 8px; padding: 8px 11px; display: flex; flex-direction: column; gap: 2px;">
+                    <span style="font-size: 11px; font-weight: 600;">{{ st.t }}</span>
+                    <span style="font-size: 9px; font-family: monospace; color: {{ st.subC }};">{{ st.sub }}</span>
+                  </div>
+                  <sc-if value="{{ st.arrow }}" hint-placeholder-val="{{ false }}"><span style="color: #c9c9c4; font-size: 12px; animation: pulseDot 1.6s ease-in-out {{ st.d }} infinite;">→</span></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+        <div style="padding: 14px 20px; border-top: 1px solid #eeeee9; font-size: 12px; color: #9a9a94; display: flex; justify-content: space-between; align-items: center;">
+          <span>What does this look like for your stack?</span>
+          <a href="https://cal.com/wasim/sanity" target="_blank" style="color: #141414; font-weight: 500;">Ask on a call →</a>
+        </div>
+      </div>
+      <div data-scroll-row="true" style="display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; align-items: center; margin-top: 18px; padding-bottom: 2px;">
+        <span style="font-size: 12px; color: #9a9a94; margin-right: 4px; flex-shrink: 0;">Works across</span>
+        <sc-for list="{{ feat.chips }}" as="chip" hint-placeholder-count="5">
+          <div style="font-size: 11.5px; padding: 5px 12px; border-radius: 999px; background: #f0f0eb; color: #55554f; white-space: nowrap; flex-shrink: 0;">{{ chip }}</div>
+        </sc-for>
+      </div>
+    </section>
+  </sc-for>
+
+  <!-- Process: split with checklist -->
+  <section id="process" data-screen-label="Process" style="background: #f0f0eb; margin-top: 40px;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: clamp(48px, 8vw, 88px) clamp(20px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(32px, 6vw, 72px); align-items: start;">
+      <div>
+        <h2 style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.18; margin: 0 0 16px;">Audit the funnel. Then put it on autopilot.</h2>
+        <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0 0 28px; max-width: 380px; text-wrap: pretty;">Every engagement runs the same arc: map what leaks, build the system, prove it against revenue, and hand it over documented.</p>
+        <a href="https://cal.com/wasim/sanity" target="_blank" style="background: #0a0a0a; color: #f5f5f2; font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 999px; display: inline-flex; gap: 8px;">Start with an audit <span>→</span></a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <sc-for list="{{ steps }}" as="step" hint-placeholder-count="4">
+          <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 10px; padding: 18px 20px; display: grid; grid-template-columns: 26px 1fr; gap: 14px; align-items: start;">
+            <div style="width: 22px; height: 22px; border-radius: 50%; background: #0a0a0a; color: #f5f5f2; font-size: 11px; display: flex; align-items: center; justify-content: center; margin-top: 1px;">{{ step.n }}</div>
+            <div>
+              <div style="font-size: 14px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 4px;">{{ step.title }}</div>
+              <div style="font-size: 13px; line-height: 1.55; color: #6e6e68;">{{ step.desc }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" data-screen-label="Pricing" style="max-width: 1200px; margin: 0 auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 40px);">
+    <h2 style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 44px;">Engagements.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 208px), 1fr)); gap: clamp(12px, 1.6vw, 20px); align-items: stretch;">
+      <sc-for list="{{ plans }}" as="plan" hint-placeholder-count="3">
+        <div style="border: 1px solid {{ plan.border }}; background: {{ plan.bg }}; color: {{ plan.fg }}; border-radius: 12px; padding: 28px 26px 30px; display: flex; flex-direction: column;">
+          <div style="font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: {{ plan.muted }}; margin-bottom: 14px;">{{ plan.label }}</div>
+          <div style="font-size: 25px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 2px;">{{ plan.price }}</div>
+          <div style="font-size: 12px; color: {{ plan.muted }}; margin-bottom: 20px;">{{ plan.per }}</div>
+          <div style="font-size: 13px; line-height: 1.6; color: {{ plan.muted }}; margin-bottom: 22px; text-wrap: pretty;">{{ plan.desc }}</div>
+          <div style="display: flex; flex-direction: column; gap: 9px; margin-bottom: 26px;">
+            <sc-for list="{{ plan.features }}" as="f" hint-placeholder-count="4">
+              <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: #e8541e;">—</span><span>{{ f }}</span></div>
+            </sc-for>
+          </div>
+          <a href="https://cal.com/wasim/sanity" target="_blank" style="margin-top: auto; text-align: center; font-size: 13px; font-weight: 500; padding: 10px 0; border-radius: 999px; background: {{ plan.btnBg }}; color: {{ plan.btnFg }}; border: 1px solid {{ plan.btnBorder }};">{{ plan.cta }}</a>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 20px; border: 1px dashed #c9c9c4; border-radius: 12px; padding: 26px 28px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+      <div>
+        <div style="font-size: 16px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 5px;">Need something custom?</div>
+        <div style="font-size: 13px; line-height: 1.6; color: #6e6e68; max-width: 520px; text-wrap: pretty;">Larger scope, multiple brands, or a one-off automation project — we'll shape an engagement around it and quote it on the call.</div>
+      </div>
+      <a href="https://cal.com/wasim/sanity" target="_blank" style="font-size: 13px; font-weight: 500; padding: 10px 20px; border-radius: 999px; border: 1px solid #0a0a0a; color: #0a0a0a; white-space: nowrap;">Get a custom quote →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" data-screen-label="FAQ" style="max-width: 1040px; margin: 0 auto; padding: 24px clamp(20px, 4vw, 40px) 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 64px); align-items: start;">
+    <h2 style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; margin: 0;">Questions, answered.</h2>
+    <div>
+      <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="5">
+        <div style="border-top: 1px solid #e4e4df;">
+          <button onClick="{{ faq.toggle }}" style="all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 0; font-size: 15px; font-weight: 500; letter-spacing: -.01em; font-family: inherit;">
+            <span>{{ faq.q }}</span>
+            <span style="color: #9a9a94; font-weight: 400;">{{ faq.mark }}</span>
+          </button>
+          <sc-if value="{{ faq.open }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size: 13px; line-height: 1.65; color: #6e6e68; padding: 0 60px 22px 0; max-width: 540px;">{{ faq.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Dark closer -->
+  <section id="contact" data-screen-label="CTA" style="background: #0a0a0a; color: #f2f2ee; position: relative; overflow: hidden;">
+    <div style="position: absolute; inset: 0; display: flex; justify-content: flex-end; gap: 7px;">
+      <sc-for list="{{ closerBars }}" as="b" hint-placeholder-count="14">
+        <div style="width: 3px; height: {{ b.h }}%; background: #e8541e; opacity: {{ b.o }}; align-self: flex-end;"></div>
+      </sc-for>
+    </div>
+    <div style="position: relative; max-width: 1040px; margin: 0 auto; padding: clamp(56px, 9vw, 100px) clamp(20px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 64px); align-items: center;">
+      <h2 style="font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; margin: 0;">Your growth requires a system, not more headcount.</h2>
+      <div>
+        <p style="font-size: 14px; line-height: 1.6; color: #a5a59f; margin: 0 0 26px; max-width: 380px; text-wrap: pretty;">Bring us your funnel, your stack, and your targets. We'll show you where the automation is hiding — on the first call.</p>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="https://cal.com/wasim/sanity" target="_blank" style="background: #f2f2ee; color: #0a0a0a; font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 999px; display: inline-flex; gap: 8px;">Book a call <span>→</span></a>
+          <a href="mailto:wasim@sanity.ai" style="font-size: 13px; color: #a5a59f;">wasim@sanity.ai</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-screen-label="Footer" style="max-width: 1200px; margin: 0 auto; padding: 64px clamp(20px, 4vw, 40px) 32px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+      <img src="uploads/logoblack.png" alt="SanityAI" style="height: 11px; display: block;">
+      <div style="display: flex; gap: 64px;">
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+          <div style="color: #9a9a94; font-size: 12px;">Company</div>
+          <a href="#services" style="color: #444440;">Services</a>
+          <a href="#process" style="color: #444440;">Process</a>
+          <a href="#pricing" style="color: #444440;">Pricing</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+          <div style="color: #9a9a94; font-size: 12px;">Connect</div>
+          <a href="https://cal.com/wasim/sanity" target="_blank" style="color: #444440;">Book a call</a>
+          <a href="mailto:wasim@sanity.ai" style="color: #444440;">wasim@sanity.ai</a>
+          <a href="https://www.linkedin.com/company/sanityhq/" target="_blank" style="color: #444440;">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-top: 56px; padding-top: 22px; border-top: 1px solid #e4e4df; font-size: 12px; color: #9a9a94;">
+      <span>© SanityAI 2026</span>
+      <span>We are 100% remote.</span>
+    </div>
+  </footer>
+
+  <!-- Oversized wordmark -->
+  <div style="overflow: hidden; user-select: none; pointer-events: none; max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px);">
+    <div style="width: 100%; aspect-ratio: 709 / 104; background: repeating-linear-gradient(0deg, #cfcfca 0, #cfcfca clamp(1px, 0.17vw, 2px), #fbfbfa clamp(1px, 0.17vw, 2px), #fbfbfa clamp(3.5px, 0.67vw, 8px)), repeating-linear-gradient(90deg, #cfcfca 0, #cfcfca clamp(1px, 0.17vw, 2px), transparent clamp(1px, 0.17vw, 2px), transparent clamp(3.5px, 0.67vw, 8px)); background-blend-mode: multiply; -webkit-mask-image: url('uploads/logoblack.png'); mask-image: url('uploads/logoblack.png'); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; transform: translateY(28%);"></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;fontFamily&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Instrument Sans&quot;, &quot;System&quot;], &quot;default&quot;: &quot;Instrument Sans&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Typography&quot; }
+}">
+class Component extends DCLogic {
+  state = { openFaq: 0, featTabs: [0, 0, 0], heroTab: 0 };
+  decorate(m) {
+    return {
+      label: m.label,
+      metrics: m.metrics.map((x, i) => ({ c: '#141414', d: (i * 0.9) + 's', ...x })),
+      isBars: m.vis === 'bars', isRows: m.vis === 'rows', isFlow: m.vis === 'flow',
+      bars: (m.bars ?? []).map((b, i) => ({ ...b, d: (i * 0.018) + 's' })),
+      rows: (m.rows ?? []).map((r, i) => ({ ...r, d: (0.05 + i * 0.1) + 's' })),
+      stages: (m.stages ?? []).map((s, i) => ({ ...s, d: (0.05 + i * 0.14) + 's' })),
+    };
+  }
+  componentDidMount() {
+    const hero = document.querySelector('[data-screen-label="Hero"]');
+    if (!hero) return;
+    this._onScroll = () => {
+      const b = hero.getBoundingClientRect().bottom;
+      document.documentElement.toggleAttribute('data-past-hero', b < 64);
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true, capture: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll, { capture: true });
+      window.removeEventListener('resize', this._onScroll);
+    }
+    document.documentElement.removeAttribute('data-past-hero');
+  }
+  renderVals() {
+    const docFont = (this.props.fontFamily ?? 'Instrument Sans') === 'Instrument Sans'
+      ? '"Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif'
+      : '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif';
+    const mkBars = (n, seed) => {
+      const arr = [];
+      for (let i = 0; i < n; i++) arr.push({ h: 35 + ((i * seed) % 60), o: 0.25 + ((i * 29) % 60) / 100 });
+      return arr;
+    };
+    const leftBars = mkBars(18, 17);
+    const rightBars = mkBars(18, 23);
+    const closerBars = mkBars(14, 19).map(b => ({ ...b, h: Math.round(b.h * 0.7) }));
+    const chartBars = [];
+    for (let i = 0; i < 42; i++) {
+      const h = 18 + Math.round(38 * (0.5 + 0.5 * Math.sin(i / 3.1)) + ((i * 13) % 24));
+      chartBars.push({ h: Math.min(h, 96), bg: i % 7 === 5 ? '#e8541e' : '#d9d9d3' });
+    }
+    const pOk0 = { pillBg: '#e9f2ea', pillFg: '#2c6a3f' }, pHot0 = { pillBg: '#fdeee6', pillFg: '#c14a17' }, pMut0 = { pillBg: '#f0f0eb', pillFg: '#55554f' };
+    const stOn0 = { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f5f5f2', subC: '#8f8f89' }, stOff0 = { border: '#e4e4df', bg: '#ffffff', fg: '#444440', subC: '#9a9a94' };
+    const mkFlow0 = (list) => list.map(([t, sub], i) => ({ t, sub, arrow: i < list.length - 1, ...(i === 0 ? stOn0 : stOff0) }));
+    const heroMocks = [
+      { t: 'Overview', label: 'revenue system', vis: 'bars', bars: chartBars, metrics: [
+        { v: 'AED 2.4M', l: 'pipeline influenced' }, { v: '184', l: 'workflows live' }, { v: '96%', l: 'leads routed < 5 min' }, { v: '+38%', l: 'SQLs this quarter', c: '#e8541e' }] },
+      { t: 'Lifecycle flows', label: 'lifecycle flows', vis: 'flow', metrics: [{ v: '24', l: 'flows live' }, { v: '12.4k', l: 'contacts enrolled' }], stages: mkFlow0([['Trigger', 'form fill'], ['Enrich', '38 fields'], ['Score', 'model v2'], ['Route', 'to owner'], ['Sequence', 'day 0–14']]) },
+      { t: 'Lead routing', label: 'lead routing', vis: 'rows', metrics: [{ v: '4m 12s', l: 'median time to owner' }, { v: '100%', l: 'leads owned', c: '#e8541e' }], rows: [
+        { a: 'Demo request · website', pill: 'assigned', ...pOk0, b: '38s' },
+        { a: 'Pricing page · 3rd visit', pill: 'assigned', ...pOk0, b: '2m 05s' },
+        { a: 'Webinar signup', pill: 'assigned', ...pOk0, b: '4m 44s' },
+        { a: 'Content download', pill: 'nurture', ...pMut0, b: '—' }] },
+      { t: 'Paid campaigns', label: 'paid campaigns', vis: 'rows', metrics: [{ v: 'AED 184k', l: 'monthly spend' }, { v: '4.1×', l: 'pipeline : spend', c: '#e8541e' }], rows: [
+        { a: 'Search · high-intent keywords', pill: 'scaling', ...pHot0, b: 'AED 61k' },
+        { a: 'LinkedIn · ABM tier 1', pill: 'live', ...pOk0, b: 'AED 48k' },
+        { a: 'Retargeting · pricing visitors', pill: 'live', ...pOk0, b: 'AED 22k' },
+        { a: 'Display · prospecting', pill: 'paused', ...pMut0, b: 'AED 0' }] },
+      { t: 'Content engine', label: 'content engine', vis: 'rows', metrics: [{ v: '28.4k', l: 'organic sessions / mo' }, { v: '112', l: 'keywords in top 10', c: '#e8541e' }], rows: [
+        { a: 'Comparison pages · programmatic', pill: 'published', ...pOk0, b: '34 pages' },
+        { a: 'Buyer guides · ICP tier 1', pill: 'published', ...pOk0, b: '12 pages' },
+        { a: 'Case study engine', pill: 'drafting', ...pMut0, b: 'agent' },
+        { a: 'Newsletter · monthly', pill: 'scheduled', ...pMut0, b: 'day 28' }] },
+      { t: 'AI agents', label: 'ai agents', vis: 'flow', metrics: [{ v: '9', l: 'agents deployed' }, { v: '100%', l: 'actions logged', c: '#e8541e' }], stages: mkFlow0([['Intake', 'email + slack'], ['Triage', 'agent'], ['Draft', 'reply v1'], ['Review', 'human'], ['Done', 'logged']]) },
+      { t: 'Reporting', label: 'reporting', vis: 'rows', metrics: [{ v: '1', l: 'source of truth' }, { v: '4', l: 'live dashboards' }], rows: [
+        { a: 'Revenue & pipeline overview', pill: 'live', ...pOk0, b: 'exec team' },
+        { a: 'Campaign performance', pill: 'live', ...pOk0, b: 'marketing' },
+        { a: 'Lead flow & routing health', pill: 'live', ...pOk0, b: 'sales ops' },
+        { a: 'Automation run log', pill: 'live', ...pOk0, b: 'everyone' }] },
+    ];
+    const sideItems = heroMocks.map((m, i) => {
+      const on = this.state.heroTab === i;
+      return {
+        t: m.t, c: on ? '#141414' : '#9a9a94', w: on ? '600' : '400',
+        itemBg: on ? '#f0f0eb' : 'transparent', dot: on ? '#e8541e' : '#d9d9d3',
+        select: () => this.setState({ heroTab: i }),
+      };
+    });
+    const heroMock = this.decorate(heroMocks[this.state.heroTab] ?? heroMocks[0]);
+    const icons = {
+      HubSpot: 'M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z',
+      Claude: 'M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z',
+      Zapier: 'M14.767 8.761h.03a.577.577 0 0 1 .23.038.585.585 0 0 1 .201.124.63.63 0 0 1 .162.431.612.612 0 0 1-.162.435.58.58 0 0 1-.201.128.58.58 0 0 1-.23.042.529.529 0 0 1-.235-.042.585.585 0 0 1-.332-.328.559.559 0 0 1-.038-.235.613.613 0 0 1 .17-.431.59.59 0 0 1 .405-.162Zm-2.32 3.239a3.6 3.6 0 0 1-.234 1.285l-.001.003a3.62 3.62 0 0 1-2.55-2.552h.002a3.6 3.6 0 0 1 1.283-.233h.003a3.6 3.6 0 0 1 1.285.233l.002.001a3.6 3.6 0 0 1 .21 1.263v-.003zm5.831-1.264v-.001l-3.593-.001a1.9 1.9 0 0 0-.083-.201l2.543-2.543a6 6 0 0 0-.674-.798v-.001a6 6 0 0 0-.798-.673l-2.543 2.543a2 2 0 0 0-.2-.083V4.945a6 6 0 0 0-1.043-.096h-.014a6 6 0 0 0-1.043.096v3.593a2 2 0 0 0-.201.083L7.885 6.078a6 6 0 0 0-.798.673l-.001.001a6 6 0 0 0-.673.798l2.543 2.543a2 2 0 0 0-.083.2H5.28a6 6 0 0 0-.096 1.044v.013a6 6 0 0 0 .096 1.043h3.593q.037.103.083.201l-2.543 2.543a6 6 0 0 0 1.471 1.472l2.543-2.543a2 2 0 0 0 .201.083v3.593a6 6 0 0 0 1.042.096h.016a6 6 0 0 0 1.042-.096v-3.593a2 2 0 0 0 .201-.083l2.543 2.543a6 6 0 0 0 .798-.673l.001-.001a6 6 0 0 0 .673-.798l-2.543-2.543q.046-.099.083-.201h3.593a6 6 0 0 0 .096-1.042v-.016a6 6 0 0 0-.096-1.042z',
+      Make: 'M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z',
+      n8n: 'M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632',
+      'Google Ads': 'M3.9998 22.9291C1.7908 22.9291 0 21.1383 0 18.9293s1.7908-3.9998 3.9998-3.9998 3.9998 1.7908 3.9998 3.9998-1.7908 3.9998-3.9998 3.9998zm19.4643-6.0004L15.4632 3.072C14.3586 1.1587 11.9121.5028 9.9988 1.6074S7.4295 5.1585 8.5341 7.0718l8.0009 13.8567c1.1046 1.9133 3.5511 2.5679 5.4644 1.4646 1.9134-1.1046 2.568-3.5511 1.4647-5.4644zM7.5137 4.8438L1.5645 15.1484A4.5 4.5 0 0 1 4 14.4297c2.5597-.0075 4.6248 2.1585 4.4941 4.7148l3.2168-5.5723-3.6094-6.25c-.4499-.7793-.6322-1.6394-.5878-2.4784z',
+      'Google Analytics': 'M22.84 2.9982v17.9987c.0086 1.6473-1.3197 2.9897-2.967 2.9984a2.9808 2.9808 0 01-.3677-.0208c-1.528-.226-2.6477-1.5558-2.6105-3.1V3.1204c-.0369-1.5458 1.0856-2.8762 2.6157-3.1 1.6361-.1915 3.1178.9796 3.3093 2.6158.014.1201.0208.241.0202.3619zM4.1326 18.0548c-1.6417 0-2.9726 1.331-2.9726 2.9726C1.16 22.6691 2.4909 24 4.1326 24s2.9726-1.3309 2.9726-2.9726-1.331-2.9726-2.9726-2.9726zm7.8728-9.0098c-.0171 0-.0342 0-.0513.0003-1.6495.0904-2.9293 1.474-2.891 3.1256v7.9846c0 2.167.9535 3.4825 2.3505 3.763 1.6118.3266 3.1832-.7152 3.5098-2.327.04-.1974.06-.3983.0593-.5998v-8.9585c.003-1.6474-1.33-2.9852-2.9773-2.9882z',
+      LinkedIn: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z',
+      Slack: 'M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z',
+      Salesforce: 'M10.005 5.415c.774-.806 1.851-1.306 3.043-1.306 1.585 0 2.968.884 3.704 2.196.64-.286 1.348-.446 2.094-.446 2.86 0 5.179 2.339 5.179 5.223 0 2.885-2.319 5.223-5.179 5.223a5.15 5.15 0 0 1-1.019-.101c-.648 1.156-1.883 1.937-3.301 1.937a3.75 3.75 0 0 1-1.649-.379c-.658 1.548-2.192 2.632-3.979 2.632-1.861 0-3.446-1.176-4.051-2.825a3.985 3.985 0 0 1-.826.086C1.849 17.655.157 15.926.157 13.798c0-1.427.76-2.674 1.895-3.348a4.4 4.4 0 0 1-.363-1.76c0-2.446 1.988-4.428 4.44-4.428 1.44 0 2.72.684 3.531 1.744',
+      Segment: 'M15.844 4.635a.837.837 0 0 1-.79-.56A5.339 5.339 0 0 0 9.99.53 5.362 5.362 0 0 0 4.66 4.28a.837.837 0 0 1-1.599-.5A7.036 7.036 0 0 1 9.99-1.146a7.013 7.013 0 0 1 6.644 4.66.837.837 0 0 1-.79 1.121zM12.024 24a7.013 7.013 0 0 1-6.644-4.66.837.837 0 1 1 1.58-.56 5.339 5.339 0 0 0 5.064 3.545 5.362 5.362 0 0 0 5.33-3.75.837.837 0 0 1 1.599.5A7.036 7.036 0 0 1 12.024 24zM23.163 10.463H.837a.837.837 0 0 0 0 1.674h22.326a.837.837 0 0 0 0-1.674z',
+    };
+    const names = ['HubSpot', 'Salesforce', 'Claude', 'Zapier', 'Make', 'n8n', 'Segment', 'Google Ads', 'Google Analytics', 'LinkedIn', 'Slack'];
+    const baseLogos = names.map(name => ({ name, hasIcon: !!icons[name], path: icons[name] ?? '' }));
+    const stackLogos = [...baseLogos, ...baseLogos];
+    const tabOn = { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f5f5f2' };
+    const tabOff = { border: '#e4e4df', bg: '#ffffff', fg: '#6e6e68' };
+    const mkBars2 = (n, seed, every) => {
+      const a = [];
+      for (let i = 0; i < n; i++) {
+        const h = 22 + Math.round(36 * (0.5 + 0.5 * Math.sin(i / 2.7)) + ((i * seed) % 26));
+        a.push({ h: Math.min(h, 96), bg: i % every === every - 1 ? '#e8541e' : '#d9d9d3' });
+      }
+      return a;
+    };
+    const pOk = { pillBg: '#e9f2ea', pillFg: '#2c6a3f' }, pHot = { pillBg: '#fdeee6', pillFg: '#c14a17' }, pMut = { pillBg: '#f0f0eb', pillFg: '#55554f' };
+    const mkFlow = mkFlow0;
+    const featureDefs = [
+      {
+        eyebrow: 'Marketing automation & CRM',
+        title: 'Lifecycle flows that nurture, score, and route — automatically.',
+        desc: 'Email and CRM automation built around real buying behavior. Leads get scored, enriched, and handed to the right rep in minutes, not days.',
+        chips: ['HubSpot', 'Salesforce', 'Marketo', 'Customer.io'],
+        tabNames: ['Lifecycle flows', 'Lead scoring', 'Routing', 'Nurture', 'CRM hygiene'],
+        mocks: [
+          { label: 'lifecycle flows', vis: 'flow', metrics: [{ v: '24', l: 'flows live' }, { v: '12.4k', l: 'contacts enrolled' }, { v: '96%', l: 'fully automated', c: '#e8541e' }], stages: mkFlow([['Trigger', 'form fill'], ['Enrich', '38 fields'], ['Score', 'model v2'], ['Route', 'to owner'], ['Sequence', 'day 0\u201314']]) },
+          { label: 'lead scoring', vis: 'rows', metrics: [{ v: '38', l: 'scoring signals' }, { v: '2.1×', l: 'SQL conversion', c: '#e8541e' }], rows: [
+            { a: 'VP Operations · mid-market SaaS', pill: 'Score 94', ...pHot, b: 'route → AE' },
+            { a: 'Head of RevOps · logistics', pill: 'Score 81', ...pHot, b: 'route → AE' },
+            { a: 'Marketing Manager · fintech', pill: 'Score 62', ...pMut, b: 'nurture' },
+            { a: 'Analyst · consulting firm', pill: 'Score 34', ...pMut, b: 'newsletter' },
+          ]},
+          { label: 'routing', vis: 'rows', metrics: [{ v: '4m 12s', l: 'median time to owner' }, { v: '100%', l: 'leads with an owner', c: '#e8541e' }], rows: [
+            { a: 'Demo request · website', pill: 'assigned', ...pOk, b: '38s' },
+            { a: 'Pricing page · 3rd visit', pill: 'assigned', ...pOk, b: '2m 05s' },
+            { a: 'Webinar signup', pill: 'assigned', ...pOk, b: '4m 44s' },
+            { a: 'Content download', pill: 'nurture pool', ...pMut, b: '—' },
+          ]},
+          { label: 'nurture', vis: 'bars', metrics: [{ v: '11', l: 'sequences running' }, { v: '41%', l: 'open rate' }, { v: '8.2%', l: 'reply rate', c: '#e8541e' }], bars: mkBars2(42, 11, 6) },
+          { label: 'crm hygiene', vis: 'rows', metrics: [{ v: '1,840', l: 'records cleaned / mo' }], rows: [
+            { a: 'Duplicate contacts merged', pill: 'auto', ...pOk, b: '312 / mo' },
+            { a: 'Missing fields enriched', pill: 'auto', ...pOk, b: '947 / mo' },
+            { a: 'Stale deals flagged', pill: 'review', ...pMut, b: '58 / mo' },
+            { a: 'Bounced emails suppressed', pill: 'auto', ...pOk, b: '523 / mo' },
+          ]},
+        ],
+      },
+      {
+        eyebrow: 'Workflow & ops automation',
+        title: 'AI agents that clear the manual work between your tools.',
+        desc: 'Enrichment, triage, drafting, follow-ups, handoffs — automated with logging and human checkpoints. No black boxes in your revenue path.',
+        chips: ['Clay', 'n8n', 'Zapier', 'Make', 'Slack'],
+        tabNames: ['AI agents', 'Enrichment', 'Integrations', 'Handoffs', 'Runbooks'],
+        mocks: [
+          { label: 'ai agents', vis: 'flow', metrics: [{ v: '9', l: 'agents deployed' }, { v: '100%', l: 'actions logged', c: '#e8541e' }], stages: mkFlow([['Intake', 'email + slack'], ['Agent triage', 'claude'], ['Draft', 'reply v1'], ['Human review', '1-click'], ['Done', 'logged']]) },
+          { label: 'enrichment', vis: 'rows', metrics: [{ v: '38', l: 'fields per record' }, { v: '92%', l: 'match rate', c: '#e8541e' }], rows: [
+            { a: 'Company size & industry', pill: 'enriched', ...pOk, b: 'Clay' },
+            { a: 'Tech stack detection', pill: 'enriched', ...pOk, b: 'Clay' },
+            { a: 'Decision-maker mapping', pill: 'enriched', ...pOk, b: 'LinkedIn' },
+            { a: 'Intent signals', pill: 'queued', ...pMut, b: 'agent' },
+          ]},
+          { label: 'integrations', vis: 'rows', metrics: [{ v: '17', l: 'active syncs' }], rows: [
+            { a: 'HubSpot ↔ Slack', pill: 'synced', ...pOk, b: 'real-time' },
+            { a: 'Website ↔ CRM ↔ ad platforms', pill: 'synced', ...pOk, b: 'real-time' },
+            { a: 'Billing ↔ CRM lifecycle stage', pill: 'synced', ...pOk, b: 'hourly' },
+            { a: 'Support ↔ account health score', pill: 'synced', ...pOk, b: 'daily' },
+          ]},
+          { label: 'handoffs', vis: 'flow', metrics: [{ v: '0', l: 'leads lost in handoff', c: '#e8541e' }], stages: mkFlow([['Form fill', 'website'], ['CRM record', 'hubspot'], ['Slack alert', '#sales'], ['Task assigned', 'owner']]) },
+          { label: 'runbooks', vis: 'rows', metrics: [{ v: '100%', l: 'workflows documented', c: '#e8541e' }], rows: [
+            { a: 'Lead routing runbook', pill: 'passing', ...pOk, b: 'run 2h ago' },
+            { a: 'Weekly reporting runbook', pill: 'passing', ...pOk, b: 'run 1d ago' },
+            { a: 'Enrichment pipeline runbook', pill: 'passing', ...pOk, b: 'run 4h ago' },
+            { a: 'Agent escalation runbook', pill: 'review', ...pMut, b: 'run 3d ago' },
+          ]},
+        ],
+      },
+      {
+        eyebrow: 'Demand & analytics',
+        title: 'Paid, content, and SEO wired straight to revenue data.',
+        desc: 'Campaigns and content report to one dashboard tied to closed pipeline — so spend follows revenue, and every stakeholder sees the same numbers.',
+        chips: ['Google Ads', 'LinkedIn Ads', 'GA4', 'Looker Studio', 'Segment'],
+        tabNames: ['Attribution', 'Paid media', 'Content & SEO', 'Dashboards'],
+        mocks: [
+          { label: 'attribution', vis: 'rows', metrics: [{ v: 'AED 2.4M', l: 'pipeline attributed' }], rows: [
+            { a: 'Paid search', pill: '32% of pipeline', ...pHot, b: 'AED 768k' },
+            { a: 'LinkedIn campaigns', pill: '24% of pipeline', ...pMut, b: 'AED 576k' },
+            { a: 'Organic & content', pill: '21% of pipeline', ...pMut, b: 'AED 504k' },
+            { a: 'Outbound sequences', pill: '15% of pipeline', ...pMut, b: 'AED 360k' },
+          ]},
+          { label: 'paid media', vis: 'bars', metrics: [{ v: 'AED 184k', l: 'monthly spend managed' }, { v: '4.1×', l: 'pipeline : spend', c: '#e8541e' }], bars: mkBars2(42, 17, 7) },
+          { label: 'content & seo', vis: 'bars', metrics: [{ v: '28.4k', l: 'organic sessions / mo' }, { v: '112', l: 'keywords in top 10' }, { v: '+64%', l: 'YoY growth', c: '#e8541e' }], bars: mkBars2(42, 23, 8) },
+          { label: 'dashboards', vis: 'rows', metrics: [{ v: '1', l: 'source of truth' }], rows: [
+            { a: 'Revenue & pipeline overview', pill: 'live', ...pOk, b: 'exec team' },
+            { a: 'Campaign performance', pill: 'live', ...pOk, b: 'marketing' },
+            { a: 'Lead flow & routing health', pill: 'live', ...pOk, b: 'sales ops' },
+            { a: 'Automation run log', pill: 'live', ...pOk, b: 'everyone' },
+          ]},
+        ],
+      },
+    ];
+    const features = featureDefs.map((f, fi) => {
+      const sel = this.state.featTabs[fi] ?? 0;
+      const tabs = f.tabNames.map((t, ti) => ({
+        t, ...(ti === sel ? tabOn : tabOff),
+        select: () => this.setState(s => { const ft = [...s.featTabs]; ft[fi] = ti; return { featTabs: ft }; }),
+      }));
+      const active = this.decorate(f.mocks[sel]);
+      return { ...f, tabs, active };
+    });
+    const steps = [
+      { n: '1', title: 'Audit — map the funnel and the friction', desc: 'Two weeks inside your stack and pipeline. We document what runs, what leaks, and a costed build plan.' },
+      { n: '2', title: 'Build — ship the core system', desc: 'Automations, CRM structure, campaigns, and dashboards in weekly increments, live in your accounts from day one.' },
+      { n: '3', title: 'Prove — attribute pipeline to the machine', desc: 'Every workflow reports to one dashboard, held against revenue targets — not vanity metrics.' },
+      { n: '4', title: 'Hand over — your team owns it', desc: 'Documentation, training, and runbooks. You keep the system; we stay on retainer only if it earns it.' },
+    ];
+    const dark = { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f2f2ee', muted: '#8f8f89', btnBg: '#f2f2ee', btnFg: '#0a0a0a', btnBorder: '#f2f2ee' };
+    const light = { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', btnBg: 'transparent', btnFg: '#141414', btnBorder: '#c9c9c4' };
+    const plans = [
+      { ...light, label: 'Audit', price: 'AED 6,500', per: 'one-time · 2 weeks', desc: 'The full map of your funnel, stack, and automation opportunities — with a build plan you can run anywhere.', features: ['Stack & funnel audit', 'Automation opportunity map', 'Costed 90-day roadmap', 'Credited toward a build'], cta: 'Start with an audit' },
+      { ...dark, label: 'Build', price: 'AED 20,000', per: 'per month · 3-month min.', desc: 'The core engagement. We design, build, and run your automation and marketing system end to end.', features: ['Dedicated pod: strategist, builder, marketer', 'Weekly shipped increments', 'CRM, lifecycle, paid & content', 'Live revenue dashboard'], cta: 'Book a call' },
+      { ...light, label: 'Retainer', price: 'AED 8,000', per: 'per month', desc: 'Post-handover: optimization, new workflows, and campaign support without a full pod.', features: ['Monthly optimization sprints', 'New automation requests', 'Quarterly system review', 'Slack-level response times'], cta: 'Book a call' },
+    ];
+    const faqData = [
+      { q: 'Who is this for?', a: 'Most companies with a working product and a real sales motion — typically SaaS, professional services, and mid-market ops teams. If you\'re pre-revenue, start with the audit only.' },
+      { q: 'What tools do you work in?', a: 'HubSpot, Salesforce, Marketo, Clay, Zapier/Make, n8n, Segment, and the major ad platforms. We build in your accounts — you own every asset from day one.' },
+      { q: 'How is this different from a marketing agency?', a: 'Agencies ship campaigns and keep the machinery. We ship the machinery. Campaigns are one output of a system your team ends up owning and understanding.' },
+      { q: 'How fast do we see results?', a: 'Automation wins (routing, follow-up, hygiene) land in the first 2–3 weeks. Pipeline impact from demand work typically shows within one quarter.' },
+      { q: 'Do you use AI agents?', a: 'Where they beat a deterministic workflow, yes — enrichment, drafting, triage. Every agent runs with logging and human checkpoints. No black boxes in your revenue path.' },
+    ];
+    const faqs = faqData.map((f, i) => ({
+      ...f,
+      open: this.state.openFaq === i,
+      mark: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })),
+    }));
+    return { docFont, leftBars, rightBars, closerBars, sideItems, heroMock, stackLogos, features, steps, plans, faqs };
+  }
+}
+</script>
+</body>
+</html>

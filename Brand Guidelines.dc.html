@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0a0a0a"></rect><rect x="35" y="35" width="30" height="30" fill="#e8541e"></rect></svg></template>
+<title>SanityAI — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; color: #141414; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #777; }
+  doc-page:not(:defined) { visibility: hidden; }
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0.75in" hint-size="100%,100%" style="font-family: {{ docFont }};">
+
+  <!-- Cover -->
+  <div style="padding: 24px 0 40px;">
+    <img src="uploads/logoblack.png" alt="SanityAI" style="height: 16px; display: block; margin-bottom: 56px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>BRAND GUIDELINES · {{ version }}</div>
+    <h1 style="font-size: 44px; line-height: 1.08; font-weight: 600; letter-spacing: -.03em; margin: 0 0 22px; max-width: 560px;">One system. Every surface.</h1>
+    <p style="font-size: 15px; line-height: 1.55; color: #6e6e68; margin: 0; max-width: 460px;">This document specifies the SanityAI visual system exactly as built on sanityai.com. Every value is lifted verbatim from production — use it unchanged across social posts, sales decks, investor materials, portals, and future sites.</p>
+  </div>
+
+  <!-- 01 Logo -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>01 · LOGO</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 24px;">Wordmark &amp; monogram</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; break-inside: avoid;">
+      <div style="background: #fbfbfa; border: 1px solid #e4e4df; border-radius: 12px; padding: 44px 28px; display: flex; align-items: center; justify-content: center;">
+        <img src="uploads/logoblack.png" alt="SanityAI wordmark" style="height: 20px;">
+      </div>
+      <div style="background: #0a0a0a; border-radius: 12px; padding: 44px 28px; display: flex; align-items: center; justify-content: center;">
+        <img src="uploads/logoblack.png" alt="SanityAI wordmark reversed" style="height: 20px; filter: invert(1);">
+      </div>
+      <div style="background: #fbfbfa; border: 1px solid #e4e4df; border-radius: 12px; padding: 32px 28px; display: flex; align-items: center; justify-content: center;">
+        <img src="uploads/icon copy.png" alt="SA monogram" style="height: 72px;">
+      </div>
+      <div style="border: 1px dashed #c9c9c4; border-radius: 12px; padding: 24px 28px; display: flex; flex-direction: column; gap: 9px; justify-content: center;">
+        <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Nav: wordmark at <strong>13px</strong> height; footer at <strong>11px</strong></span></div>
+        <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Black on light, white (inverted) on #0a0a0a</span></div>
+        <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Monogram "SA" only for avatars &amp; favicons</span></div>
+        <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Never recolor, skew, outline, or add effects</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 Color -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>02 · COLOR</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 8px;">Palette</h2>
+    <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0 0 24px; max-width: 480px;">Near-black on warm off-white, one orange accent. Max two background colors per surface. Orange is punctuation — dots, single bars, one highlighted metric — never a fill for large areas.</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; break-inside: avoid; margin-bottom: 12px;">
+      <sc-for list="{{ coreColors }}" as="c" hint-placeholder-count="6">
+        <div style="border: 1px solid #e4e4df; border-radius: 12px; overflow: hidden;">
+          <div style="height: 72px; background: {{ c.hex }};"></div>
+          <div style="padding: 12px 14px;">
+            <div style="font-size: 13px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 2px;">{{ c.name }}</div>
+            <div style="font-size: 10.5px; color: #9a9a94; font-family: monospace;">{{ c.hex }} · {{ c.use }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; break-inside: avoid;">
+      <sc-for list="{{ grayColors }}" as="c" hint-placeholder-count="8">
+        <div style="border: 1px solid #e4e4df; border-radius: 10px; overflow: hidden;">
+          <div style="height: 40px; background: {{ c.hex }};"></div>
+          <div style="padding: 9px 12px;">
+            <div style="font-size: 11.5px; font-weight: 600;">{{ c.name }}</div>
+            <div style="font-size: 10px; color: #9a9a94; font-family: monospace;">{{ c.hex }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 20px; break-inside: avoid;">
+      <div style="font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #9a9a94; margin-bottom: 12px;">Status pills — the only other hues allowed</div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
+        <span style="font-size: 10px; padding: 2px 9px; border-radius: 999px; background: #e9f2ea; color: #2c6a3f;">positive · #e9f2ea / #2c6a3f</span>
+        <span style="font-size: 10px; padding: 2px 9px; border-radius: 999px; background: #fdeee6; color: #c14a17;">hot · #fdeee6 / #c14a17</span>
+        <span style="font-size: 10px; padding: 2px 9px; border-radius: 999px; background: #f0f0eb; color: #55554f;">neutral · #f0f0eb / #55554f</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 Typography -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>03 · TYPOGRAPHY</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 8px;">Type system</h2>
+    <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0 0 24px; max-width: 480px;"><strong>Instrument Sans</strong> everywhere: <span style="font-family: monospace; font-size: 12px;">"Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif</span>. Monospace for data labels, timestamps, and window-chrome captions. Weights: 400, 500, 600 only — nothing bolder.</p>
+    <div style="display: flex; flex-direction: column;">
+      <sc-for list="{{ typeScale }}" as="t" hint-placeholder-count="8">
+        <div style="display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: baseline; padding: 14px 0; border-top: 1px solid #e4e4df; break-inside: avoid;">
+          <div style="font-size: 10.5px; color: #9a9a94; font-family: monospace; line-height: 1.5;">{{ t.spec }}</div>
+          <div style="font-size: {{ t.size }}; font-weight: {{ t.weight }}; letter-spacing: {{ t.ls }}; line-height: {{ t.lh }}; color: {{ t.color }}; text-transform: {{ t.tt }}; font-family: {{ t.family }};">{{ t.sample }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- 04 Buttons & pills -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>04 · BUTTONS &amp; PILLS</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 8px;">Everything rounds to 999px</h2>
+    <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0 0 24px; max-width: 480px;">All buttons, tabs, and chips are full pills. Arrows (→) are the only iconography. No drop shadows on buttons, no gradients, ever.</p>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <sc-for list="{{ buttons }}" as="b" hint-placeholder-count="6">
+        <div style="display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: center; padding: 12px 0; border-top: 1px solid #e4e4df; break-inside: avoid;">
+          <div><span style="background: {{ b.bg }}; color: {{ b.fg }}; font-size: {{ b.fs }}; font-weight: {{ b.fw }}; padding: {{ b.pad }}; border-radius: 999px; border: 1px solid {{ b.border }}; display: inline-flex; gap: 8px; align-items: center; white-space: nowrap;">{{ b.label }}</span></div>
+          <div style="font-size: 10.5px; color: #9a9a94; font-family: monospace; line-height: 1.6;">{{ b.spec }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- 05 Cards & surfaces -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>05 · CARDS &amp; SURFACES</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 8px;">Surface recipes</h2>
+    <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0 0 24px; max-width: 480px;">White cards on #fbfbfa or #f0f0eb bands. Radius 12px (large), 10px (list items), 8px (inner blocks), 6px (menu items). Only the hero dashboard carries a shadow: <span style="font-family: monospace; font-size: 12px;">0 24px 60px rgba(20,20,20,.10)</span>.</p>
+    <!-- window chrome sample -->
+    <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 12px; overflow: hidden; break-inside: avoid; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 6px; padding: 10px 14px; border-bottom: 1px solid #eeeee9;">
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #e4e4df;"></span>
+        <span style="margin-left: 12px; font-size: 11px; color: #9a9a94; font-family: monospace;">SANITYAI · window chrome</span>
+      </div>
+      <div style="padding: 20px 24px;">
+        <div style="display: flex; gap: 34px; margin-bottom: 16px; flex-wrap: wrap;">
+          <div><div style="font-size: 18px; font-weight: 600; letter-spacing: -.02em;">AED 2.4M</div><div style="font-size: 10.5px; color: #9a9a94;">pipeline influenced</div></div>
+          <div><div style="font-size: 18px; font-weight: 600; letter-spacing: -.02em; color: {{ accent }};">+38%</div><div style="font-size: 10.5px; color: #9a9a94;">accent metric — one per view</div></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr auto minmax(64px, auto); gap: 14px; align-items: center; padding: 9px 0; border-top: 1px solid #f0f0eb; font-size: 11.5px;">
+          <span style="color: #444440;">Table row · label</span>
+          <span style="font-size: 10px; padding: 2px 9px; border-radius: 999px; background: #e9f2ea; color: #2c6a3f;">assigned</span>
+          <span style="color: #9a9a94; font-family: monospace; font-size: 10px; text-align: right;">38s</span>
+        </div>
+      </div>
+      <div style="padding: 14px 20px; border-top: 1px solid #eeeee9; font-size: 12px; color: #9a9a94; display: flex; justify-content: space-between;">
+        <span>Card footer · caption 12px #9a9a94</span>
+        <span style="color: #141414; font-weight: 500;">Link →</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; break-inside: avoid;">
+      <div style="background: #f0f0eb; border-radius: 12px; padding: 18px 20px;">
+        <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Section band</div>
+        <div style="font-size: 12px; color: #6e6e68; font-family: monospace;">bg #f0f0eb · full-bleed</div>
+      </div>
+      <div style="background: #0a0a0a; color: #f2f2ee; border-radius: 12px; padding: 18px 20px;">
+        <div style="font-size: 13px; font-weight: 600; margin-bottom: 4px;">Dark closer / dark card</div>
+        <div style="font-size: 12px; color: #a5a59f; font-family: monospace;">bg #0a0a0a · text #f2f2ee · muted #a5a59f</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 Signature motif -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>06 · SIGNATURE MOTIF</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 8px;">The bar field</h2>
+    <p style="font-size: 14px; line-height: 1.6; color: #6e6e68; margin: 0 0 24px; max-width: 480px;">Vertical 3px bars, 7px gap, varying height (35–95%) and opacity (.25–.85). Black bars hang from the top-left; orange (#e8541e) bars rise from the bottom-right. Use at section edges and as the texture behind dark closers — never centered, never as a chart.</p>
+    <div style="border: 1px solid #e4e4df; border-radius: 12px; overflow: hidden; break-inside: avoid; margin-bottom: 12px;">
+      <div style="height: 120px; background: #fbfbfa; display: flex; justify-content: space-between; padding: 0 24px;">
+        <div style="display: flex; gap: 7px; align-items: flex-start; height: 100%;">
+          <sc-for list="{{ leftBars }}" as="b" hint-placeholder-count="12">
+            <div style="width: 3px; height: {{ b.h }}%; background: #141414; opacity: {{ b.o }};"></div>
+          </sc-for>
+        </div>
+        <div style="display: flex; gap: 7px; align-items: flex-end; height: 100%;">
+          <sc-for list="{{ rightBars }}" as="b" hint-placeholder-count="12">
+            <div style="width: 3px; height: {{ b.h }}%; background: {{ accent }}; opacity: {{ b.o }};"></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="padding: 12px 20px; border-top: 1px solid #eeeee9; font-size: 10.5px; color: #9a9a94; font-family: monospace;">width 3px · gap 7px · height 35–95% · opacity .25–.85</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; break-inside: avoid;">
+      <div style="border: 1px solid #e4e4df; border-radius: 12px; padding: 18px 20px;">
+        <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">The orange square</div>
+        <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>7px square (13px in dark bar) · always sharp-cornered · marks eyebrows &amp; live states</div>
+      </div>
+      <div style="border: 1px solid #e4e4df; border-radius: 12px; padding: 18px 20px;">
+        <div style="font-size: 13px; font-weight: 600; margin-bottom: 8px;">Chart bars</div>
+        <div style="font-size: 12px; color: #9a9a94;">Fill #d9d9d3, every 6th–8th bar #e8541e, radius 2px 2px 0 0, gap 3px, baseline 1px #eeeee9</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 Voice + rules -->
+  <div style="break-before: page; padding-top: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: {{ accent }}; display: inline-block;"></span>07 · VOICE &amp; RULES</div>
+    <h2 style="font-size: 27px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0 0 24px;">Write like the product works</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; break-inside: avoid; margin-bottom: 20px;">
+      <div style="border: 1px solid #e4e4df; border-radius: 12px; padding: 20px 22px;">
+        <div style="font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94; margin-bottom: 12px;">Voice</div>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Declarative, lowercase-calm: "Audit the funnel. Then put it on autopilot."</span></div>
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Numbers over adjectives — AED figures, percentages, timings</span></div>
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Em-dash asides; periods in headlines; no exclamation marks</span></div>
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>"System", "engine", "owns it" — never "solutions" or "synergy"</span></div>
+        </div>
+      </div>
+      <div style="border: 1px solid #e4e4df; border-radius: 12px; padding: 20px 22px;">
+        <div style="font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94; margin-bottom: 12px;">Hard rules</div>
+        <div style="display: flex; flex-direction: column; gap: 9px;">
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>No gradients, no emoji, no icon libraries — arrows (→) only</span></div>
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Max 2 background colors per surface</span></div>
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>One orange metric per data view, max</span></div>
+          <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: {{ accent }};">—</span><span>Squares stay sharp; interactive elements are pills</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="border: 1px dashed #c9c9c4; border-radius: 12px; padding: 20px 22px; break-inside: avoid;">
+      <div style="font-size: 13px; font-weight: 600; margin-bottom: 5px;">Applying to new surfaces</div>
+      <div style="font-size: 13px; line-height: 1.6; color: #6e6e68;">Social posts: #0a0a0a or #fbfbfa ground, wordmark small, one headline in 600 / -.03em, bar-field edge, orange square as the only color. Decks: one dark closer slide per deck, section eyebrows with the 7px square, window-chrome frames for any product shot. Sites &amp; portals: this page's landing layout is the reference implementation.</div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 18px; border-top: 1px solid #e4e4df; font-size: 12px; color: #9a9a94;">
+      <span>© SanityAI 2026</span>
+      <span>Brand guidelines {{ version }} · source of truth: sanityai landing</span>
+    </div>
+  </div>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: { &quot;width&quot;: &quot;816px&quot;, &quot;height&quot;: &quot;1056px&quot; },
+  &quot;fontFamily&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Instrument Sans&quot;, &quot;System&quot;], &quot;default&quot;: &quot;Instrument Sans&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Typography&quot; },
+  &quot;accentColor&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: [&quot;#e8541e&quot;, &quot;#0a0a0a&quot;, &quot;#2c6a3f&quot;, &quot;#c14a17&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Color&quot; },
+  &quot;versionLabel&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;V1.0 · 2026&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Meta&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const mkBars = (n, seed) => {
+      const arr = [];
+      for (let i = 0; i < n; i++) arr.push({ h: 35 + ((i * seed) % 60), o: 0.25 + ((i * 29) % 60) / 100 });
+      return arr;
+    };
+    const accent = this.props.accentColor ?? '#e8541e';
+    const version = this.props.versionLabel ?? 'V1.0 · 2026';
+    const docFont = (this.props.fontFamily ?? 'Instrument Sans') === 'Instrument Sans'
+      ? '"Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif'
+      : '-apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif';
+    return {
+      accent, version, docFont,
+      leftBars: mkBars(14, 17),
+      rightBars: mkBars(14, 23),
+      coreColors: [
+        { name: 'Ink', hex: '#0a0a0a', use: 'dark surfaces, primary buttons' },
+        { name: 'Text', hex: '#141414', use: 'headings, body on light' },
+        { name: 'Signal Orange', hex: accent, use: 'accent — dots, bars, one metric' },
+        { name: 'Paper', hex: '#fbfbfa', use: 'page background' },
+        { name: 'Card White', hex: '#ffffff', use: 'cards, dashboard surfaces' },
+        { name: 'Band', hex: '#f0f0eb', use: 'section bands, chips, active states' },
+      ],
+      grayColors: [
+        { name: 'Body muted', hex: '#6e6e68' },
+        { name: 'Caption', hex: '#9a9a94' },
+        { name: 'Link gray', hex: '#444440' },
+        { name: 'Chip text', hex: '#55554f' },
+        { name: 'Border', hex: '#e4e4df' },
+        { name: 'Hairline', hex: '#eeeee9' },
+        { name: 'Dash border', hex: '#c9c9c4' },
+        { name: 'Dark muted', hex: '#a5a59f' },
+      ],
+      typeScale: [
+        { spec: 'H1 · 52px / 1.08 · 600 · -.03em', size: '36px', weight: '600', ls: '-.03em', lh: '1.08', color: '#141414', tt: 'none', family: 'inherit', sample: 'Automation & marketing systems for teams that want to scale up.' },
+        { spec: 'H2 · 30px / 1.18 · 600 · -.02em', size: '30px', weight: '600', ls: '-.02em', lh: '1.18', color: '#141414', tt: 'none', family: 'inherit', sample: 'Audit the funnel. Then put it on autopilot.' },
+        { spec: 'H3 · 27px / 1.2 · 600 · -.02em', size: '27px', weight: '600', ls: '-.02em', lh: '1.2', color: '#141414', tt: 'none', family: 'inherit', sample: 'Lifecycle flows that nurture, score, and route.' },
+        { spec: 'Lead · 16px / 1.55 · 400 · #6e6e68', size: '16px', weight: '400', ls: '0', lh: '1.55', color: '#6e6e68', tt: 'none', family: 'inherit', sample: 'SanityAI is the agency behind your growth engine — built as one system your team ends up owning.' },
+        { spec: 'Body · 14px / 1.6 · 400 · #6e6e68', size: '14px', weight: '400', ls: '0', lh: '1.6', color: '#6e6e68', tt: 'none', family: 'inherit', sample: 'Email and CRM automation built around real buying behavior. Leads get scored, enriched, and routed in minutes.' },
+        { spec: 'Metric · 19px · 600 · -.02em', size: '19px', weight: '600', ls: '-.02em', lh: '1.2', color: '#141414', tt: 'none', family: 'inherit', sample: 'AED 2.4M · 184 · 96%' },
+        { spec: 'Eyebrow · 11px · .08em · uppercase · #9a9a94', size: '11px', weight: '400', ls: '.08em', lh: '1.4', color: '#9a9a94', tt: 'uppercase', family: 'inherit', sample: 'Our tech stack' },
+        { spec: 'Data label · 10.5px mono · #9a9a94', size: '10.5px', weight: '400', ls: '0', lh: '1.5', color: '#9a9a94', tt: 'none', family: 'monospace', sample: 'SANITYAI · revenue system · 4m 12s · JAN FEB MAR' },
+      ],
+      buttons: [
+        { label: 'Book a demo →', bg: '#0a0a0a', fg: '#f5f5f2', border: '#0a0a0a', fs: '14px', fw: '500', pad: '11px 22px', spec: 'Primary · bg #0a0a0a · text #f5f5f2 · 14px/500 · pad 11px 22px' },
+        { label: 'View services', bg: 'transparent', fg: '#444440', border: '#d8d8d3', fs: '14px', fw: '400', pad: '11px 22px', spec: 'Secondary · border 1px #d8d8d3 · text #444440 · 14px · pad 11px 22px' },
+        { label: 'Book a call', bg: '#f2f2ee', fg: '#0a0a0a', border: '#f2f2ee', fs: '14px', fw: '500', pad: '11px 22px', spec: 'On dark · bg #f2f2ee · text #0a0a0a · 14px/500 · pad 11px 22px' },
+        { label: 'Get a custom quote →', bg: 'transparent', fg: '#0a0a0a', border: '#0a0a0a', fs: '13px', fw: '500', pad: '10px 20px', spec: 'Outline strong · border 1px #0a0a0a · 13px/500 · pad 10px 20px' },
+        { label: 'Active tab', bg: '#0a0a0a', fg: '#f5f5f2', border: '#0a0a0a', fs: '12px', fw: '500', pad: '7px 14px', spec: 'Tab active · bg #0a0a0a · 12px/500 · pad 7px 14px' },
+        { label: 'Chip label', bg: '#f0f0eb', fg: '#55554f', border: '#f0f0eb', fs: '11.5px', fw: '400', pad: '5px 12px', spec: 'Chip · bg #f0f0eb · text #55554f · 11.5px · pad 5px 12px' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
