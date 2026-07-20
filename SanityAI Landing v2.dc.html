@@ -44,6 +44,9 @@
   html[data-past-hero] [data-nav-inner] { justify-content: center !important; gap: 22px !important; }
   html[data-past-hero] [data-nav-links] { display: none !important; }
   html[data-past-hero] [data-mobile-cta] { display: inline-flex !important; }
+  @media (min-width: 641px) {
+    [data-cases-grid] { grid-template-columns: repeat(4, 1fr) !important; }
+  }
   @media (max-width: 640px) {
     [data-mobile-cta] { display: none !important; }
     [data-nav-inner] { flex-wrap: nowrap; justify-content: space-between; gap: 12px; }
@@ -280,7 +283,7 @@
       <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #8f8f89; margin-bottom: 14px;"><span style="width: 7px; height: 7px; background: #e8541e; display: inline-block;"></span>Selected work</div>
       <h2 style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 12px; max-width: 640px;">Systems we've shipped.</h2>
       <p style="font-size: 14px; line-height: 1.6; color: #a5a59f; margin: 0 0 44px; max-width: 480px; text-wrap: pretty;">A sample of the automation and growth work we've built — in our own products and for clients across the region.</p>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(12px, 1.6vw, 20px);">
+      <div data-cases-grid="true" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(12px, 1.6vw, 20px);">
         <sc-for list="{{ cases }}" as="c" hint-placeholder-count="4">
           <div style="background: #141412; border: 1px solid #26261f; border-radius: 16px; padding: 30px 30px 32px; display: flex; flex-direction: column;">
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px;">
@@ -633,7 +636,7 @@ class Component extends DCLogic {
     const cases = [
       { num: '01', kicker: 'In-house product', title: 'hint.fyi — a generative engine optimization platform', body: 'Our own team designed and built hint.fyi, a tool that surfaces, tracks, and resolves the issues that hurt how brands show up inside large language models — turning LLM optimization from guesswork into something you can actually measure and fix.', tags: ['GEO / LLMO', 'Monitoring', 'Product build'] },
       { num: '02', kicker: 'Voice automation', title: 'End-to-end inbound & outbound call automation', body: 'For a Dubai business we built a full voice automation layer handling both inbound and outbound calls — freeing the team from repetitive conversations while lifting how consistently and quickly customers get engaged.', tags: ['Voice AI', 'Customer engagement', 'Dubai'] },
-      { num: '03', kicker: 'Paid media', title: 'More qualified leads at a stronger ROI through the downturn', body: 'While budgets tightened during the market slowdown, we restructured paid campaigns around pipeline signals rather than clicks — pulling in better-qualified leads and stretching every dirham of spend further when it mattered most.', tags: ['Paid media', 'ROI', 'Lead quality'] },
+      { num: '03', kicker: 'In-house product', title: 'Steer — cross-channel performance monitoring & alerting', body: 'Another product from our own team: Steer keeps watch across every marketing and sales channel at once, catching the drops, spikes, and broken handoffs the moment they happen and alerting the team before a small issue quietly turns into lost pipeline.', tags: ['Monitoring', 'Alerting', 'Cross-channel'] },
       { num: '04', kicker: 'Messaging automation', title: 'Intelligent WhatsApp support wired into the whole stack', body: 'We created a smart WhatsApp automation that answers customer queries on its own and connects across the business\u2019s internal tools — so conversations, data, and actions all stay in sync instead of living in a silo.', tags: ['WhatsApp', 'Support automation', 'Integrations'] },
     ];
     return { docFont, leftBars, rightBars, closerBars, sideItems, heroMock, stackLogos, features, steps, plans, cases, faqs };

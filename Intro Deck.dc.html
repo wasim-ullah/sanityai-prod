@@ -156,7 +156,25 @@
     </div>
   </section>
 
-  <!-- 8 FAQ -->
+  <!-- 8 Success stories -->
+  <section data-document-role="page" data-label="Success stories" style="background: #0a0a0a; color: #f2f2ee; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #8f8f89; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>SUCCESS STORIES</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px;">Systems we've shipped.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1;">
+      <sc-for list="{{ stories }}" as="s" hint-placeholder-count="4">
+        <div style="background: #141412; border: 1px solid #26261f; border-radius: 20px; padding: 40px 44px; display: flex; flex-direction: column;">
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px;">
+            <span style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #e8541e;">{{ s.kicker }}</span>
+            <span style="font-size: 20px; color: #6e6e66; font-family: monospace;">{{ s.num }}</span>
+          </div>
+          <div style="font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.18; margin-bottom: 16px;">{{ s.title }}</div>
+          <div style="font-size: 22px; line-height: 1.5; color: #a5a59f;">{{ s.body }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 9 FAQ -->
   <section data-document-role="page" data-label="Common questions" style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
     <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>COMMON QUESTIONS</div>
     <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px;">Questions, answered.</h2>
@@ -242,10 +260,16 @@ class Component extends DCLogic {
         'Reports on pipeline and closed revenue',
         'Handover is part of the plan, not a threat',
       ],
+      stories: [
+        { num: '01', kicker: 'In-house product', title: 'hint.fyi — generative engine optimization', body: 'Our team built hint.fyi, a platform that surfaces, monitors, and fixes the issues affecting how brands appear inside large language models — making LLM optimization measurable.' },
+        { num: '02', kicker: 'Voice automation', title: 'End-to-end call automation in Dubai', body: 'We built a full inbound and outbound voice automation layer for a Dubai business, lifting how quickly and consistently their customers get engaged.' },
+        { num: '03', kicker: 'In-house product', title: 'Steer — cross-channel performance monitoring', body: 'Another in-house build: Steer watches every marketing and sales channel at once, catching drops, spikes, and broken handoffs the moment they happen and alerting the team before a small issue turns into lost pipeline.' },
+        { num: '04', kicker: 'Messaging', title: 'Intelligent WhatsApp support automation', body: 'We created a smart WhatsApp automation that answers customer queries and connects across the business\u2019s internal tools, keeping data and actions in sync.' },
+      ],
       plans: [
-        { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', label: 'Audit', price: 'AED 6,500', per: 'one-time \u00b7 2 weeks', desc: 'The full map of your funnel, stack, and automation opportunities \u2014 a build plan you can run anywhere.', features: ['Stack & funnel audit', 'Automation opportunity map', 'Costed 90-day roadmap', 'Credited toward a build'] },
-        { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f2f2ee', muted: '#8f8f89', label: 'Build', price: 'AED 20,000', per: 'per month \u00b7 3-month min.', desc: 'The core engagement. We design, build, and run your automation and marketing system end to end.', features: ['Dedicated pod of three', 'Weekly shipped increments', 'CRM, lifecycle, paid & content', 'Live revenue dashboard'] },
-        { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', label: 'Retainer', price: 'AED 8,000', per: 'per month', desc: 'Post-handover: optimization, new workflows, and campaign support without a full pod.', features: ['Monthly optimization sprints', 'New automation requests', 'Quarterly system review', 'Slack-level response times'] },
+        { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', label: 'Audit', price: '$3,000', per: 'one-time \u00b7 2 weeks', desc: 'The full map of your funnel, stack, and automation opportunities \u2014 a build plan you can run anywhere.', features: ['Stack & funnel audit', 'Automation opportunity map', 'Costed 90-day roadmap', 'Credited toward a build'] },
+        { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f2f2ee', muted: '#8f8f89', label: 'Build', price: '$8,000', per: 'per month \u00b7 3-month min.', desc: 'The core engagement. We design, build, and run your automation and marketing system end to end.', features: ['Dedicated pod of three', 'Weekly shipped increments', 'CRM, lifecycle, paid & content', 'Live revenue dashboard'] },
+        { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', label: 'Retainer', price: '$5,000', per: 'per month', desc: 'Post-handover: optimization, new workflows, and campaign support without a full pod.', features: ['Monthly optimization sprints', 'New automation requests', 'Quarterly system review', 'Slack-level response times'] },
       ],
       faqs: [
         { q: 'Who is this for?', a: 'Companies with a working product and a real sales motion \u2014 typically B2B SaaS, professional services, and mid-market ops teams of 20\u2013200 people.' },
