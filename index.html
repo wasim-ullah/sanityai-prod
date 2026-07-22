@@ -51,7 +51,8 @@
     [data-mobile-cta] { display: none !important; }
     [data-steer-cta] { display: none !important; }
     [data-nav-inner] { flex-wrap: nowrap; justify-content: space-between; gap: 12px; }
-    [data-nav-links] { justify-content: flex-end; gap: 16px; font-size: 12.5px; flex-shrink: 1; }
+    [data-nav-links] { justify-content: flex-end; gap: 16px; font-size: 12.5px; flex-shrink: 1; margin-left: auto; text-align: right; }
+    html:not([data-past-hero]) [data-nav-links] + div { display: none !important; }
   }
   #__bundler_err { display: none !important; }
 </style>
