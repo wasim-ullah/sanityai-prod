@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0a0a0a"></rect><rect x="35" y="35" width="30" height="30" fill="#e8541e"></rect></svg></template>
+<title>SanityAI — Sanabil 500 Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #0a0a0a; font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #777; }
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" data-uneditable="">
+
+  <!-- 1 Title -->
+  <section data-document-role="page" data-label="Title" data-speaker-notes="Sanabil Accelerator by 500 Global, Batch 12 cover. One engine, two products: Hint for AI visibility, Steer for performance loopholes." style="background: #0a0a0a; color: #f2f2ee; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="position: absolute; inset: 0; display: flex; justify-content: flex-end; gap: 12px; padding-right: 60px;">
+      <sc-for list="{{ coverBars }}" as="b" hint-placeholder-count="14">
+        <div style="width: 5px; height: {{ b.h }}%; background: #e8541e; opacity: {{ b.o }}; align-self: flex-end;"></div>
+      </sc-for>
+    </div>
+    <img src="uploads/logoblack.png" alt="SanityAI" style="position: relative; height: 28px; filter: invert(1); align-self: flex-start;">
+    <div style="position: relative;">
+      <h1 style="font-size: 100px; font-weight: 600; letter-spacing: -.03em; line-height: 1.05; margin: 0 0 32px; max-width: 1350px;">AI that finds what your marketing is missing.</h1>
+      <div style="font-size: 30px; line-height: 1.5; color: #b5b5af; max-width: 1200px;">Two products, one engine: <span style="color: #f2f2ee; font-weight: 600;">Hint</span> makes brands visible in AI search. <span style="color: #f2f2ee; font-weight: 600;">Steer</span> finds and fixes performance loopholes.</div>
+    </div>
+    <div style="position: relative; display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; color: #8f8f89;">
+      <span>Sanabil Accelerator by 500 Global · Batch 12 Application · 2026</span>
+      <span>Wasim Ullah (CEO) · Abdul Rehman (CTO)</span>
+    </div>
+  </section>
+
+  <!-- 2 Problem -->
+  <section data-document-role="page" data-label="Problem" data-speaker-notes="Sources: 2026 consumer study cited by Search Engine Land (37%); ANA programmatic transparency study ($0.36 of $1)." style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>THE PROBLEM</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px; max-width: 1300px;">Buyers moved to AI answers. Budgets still leak in the old funnel.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1;">
+      <sc-for list="{{ problems }}" as="p" hint-placeholder-count="2">
+        <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 52px 48px; display: flex; flex-direction: column; gap: 22px;">
+          <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">{{ p.tag }}</div>
+          <div style="font-size: 36px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">{{ p.t }}</div>
+          <div style="font-size: 24px; line-height: 1.55; color: #6e6e68;">{{ p.d }}</div>
+          <div style="margin-top: auto; font-size: 21px; color: #9a9a94; font-family: monospace;">{{ p.stat }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 3 Solution -->
+  <section data-document-role="page" data-label="Solution" data-speaker-notes="One intelligence engine, two products. Hint: get found by AI. Steer: stop the leaks. Shared engine strip at the bottom — Meta integration approved via App Review." style="background: #0a0a0a; color: #f2f2ee; display: flex; flex-direction: column; padding: 80px 110px 70px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #8f8f89; margin-bottom: 20px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>THE SOLUTION</div>
+    <h2 style="font-size: 62px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 48px;">One intelligence engine. Two products.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; flex: 1; perspective: 2400px;">
+      <div style="background: #141412; border: 1px solid #2a2a26; border-radius: 20px; padding: 44px 48px; display: flex; flex-direction: column; gap: 18px; transform: rotateY(4deg); transform-origin: right center;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <div style="font-size: 38px; font-weight: 600; letter-spacing: -.02em;">Hint <span style="font-size: 22px; font-weight: 400; color: #8f8f89; font-family: monospace;">hint.fyi</span></div>
+          <div style="font-size: 24px; color: #e8541e; font-weight: 600;">Get found by AI.</div>
+        </div>
+        <div style="font-size: 22px; line-height: 1.55; color: #b5b5af;">Tracks brand mentions and citations across ChatGPT, Perplexity, Gemini, and Claude. Benchmarks AI share of voice. Ships automated content and technical fixes. Attributes AI-referral revenue in GA4.</div>
+        <div style="margin-top: auto; background: #0a0a0a; border: 1px solid #2a2a26; border-radius: 12px; padding: 22px 26px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #2a2a26;"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #2a2a26;"></span><span style="font-size: 16px; color: #6e6e68; font-family: monospace; margin-left: 10px;">HINT · AI share of voice</span></div>
+          <div style="display: flex; align-items: flex-end; gap: 10px; height: 90px;">
+            <sc-for list="{{ hintBars }}" as="b" hint-placeholder-count="10">
+              <div style="flex: 1; height: {{ b.h }}%; background: {{ b.c }}; border-radius: 3px 3px 0 0;"></div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      <div style="background: #141412; border: 1px solid #2a2a26; border-radius: 20px; padding: 44px 48px; display: flex; flex-direction: column; gap: 18px; transform: rotateY(-4deg); transform-origin: left center;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <div style="font-size: 38px; font-weight: 600; letter-spacing: -.02em;">Steer</div>
+          <div style="font-size: 24px; color: #e8541e; font-weight: 600;">Stop the leaks.</div>
+        </div>
+        <div style="font-size: 22px; line-height: 1.55; color: #b5b5af;">Continuously audits ad accounts, tracking setups, and funnels to detect performance loopholes: wasted spend, broken attribution, misfiring pixels, budget misallocation. Then generates the fix, not just the finding.</div>
+        <div style="margin-top: auto; background: #0a0a0a; border: 1px solid #2a2a26; border-radius: 12px; padding: 22px 26px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;"><span style="width: 10px; height: 10px; border-radius: 50%; background: #2a2a26;"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #2a2a26;"></span><span style="font-size: 16px; color: #6e6e68; font-family: monospace; margin-left: 10px;">STEER · open findings</span></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <sc-for list="{{ steerRows }}" as="r" hint-placeholder-count="3">
+              <div style="display: flex; justify-content: space-between; align-items: center; font-size: 18px;">
+                <span style="color: #b5b5af;">{{ r.t }}</span>
+                <span style="font-size: 15px; padding: 3px 14px; border-radius: 999px; background: {{ r.bg }}; color: {{ r.fg }};">{{ r.pill }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 32px; background: linear-gradient(90deg, rgba(232,84,30,.14), rgba(232,84,30,.32), rgba(232,84,30,.14)); border: 1px solid rgba(232,84,30,.5); box-shadow: 0 0 40px rgba(232,84,30,.25); border-radius: 999px; padding: 20px 44px; text-align: center; font-size: 23px; color: #f2f2ee;"><span style="font-weight: 600;">Shared engine:</span> LLM analysis + n8n automation + first-party data connectors <span style="color: #b5b5af;">(Meta integration approved via App Review)</span></div>
+  </section>
+
+  <!-- 4 Why we're different -->
+  <section data-document-role="page" data-label="Differentiation" data-speaker-notes="The market monitors, we execute. Two rows: GEO tools vs Hint, audit dashboards vs Steer. IP strip: platform, engine, live Chrome extension, open-source kit." style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 80px 110px 70px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 20px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>WHY WE'RE DIFFERENT</div>
+    <h2 style="font-size: 62px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 48px;">The market monitors. We execute.</h2>
+    <div style="display: flex; flex-direction: column; gap: 24px; flex: 1;">
+      <sc-for list="{{ diffRows }}" as="r" hint-placeholder-count="2">
+        <div style="display: grid; grid-template-columns: 240px 1fr 1fr; gap: 24px; flex: 1;">
+          <div style="display: flex; align-items: center; font-size: 26px; font-weight: 600; letter-spacing: -.01em;">{{ r.label }}</div>
+          <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 16px; padding: 30px 36px; display: flex; flex-direction: column; justify-content: center; gap: 8px;">
+            <div style="font-size: 19px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">Them</div>
+            <div style="font-size: 24px; line-height: 1.45; color: #6e6e68;">{{ r.them }}</div>
+          </div>
+          <div style="background: #0a0a0a; color: #f2f2ee; border-radius: 16px; padding: 30px 36px; display: flex; flex-direction: column; justify-content: center; gap: 8px;">
+            <div style="font-size: 19px; letter-spacing: .06em; text-transform: uppercase; color: #e8541e;">{{ r.usLabel }}</div>
+            <div style="font-size: 24px; line-height: 1.45;">{{ r.us }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 40px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+      <span style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94; margin-right: 8px;">Proprietary IP</span>
+      <sc-for list="{{ ipChips }}" as="c" hint-placeholder-count="4">
+        <span style="font-size: 21px; padding: 12px 26px; border-radius: 999px; border: 1px solid #d8d8d2; background: #ffffff;">{{ c.t }} <span style="color: #9a9a94;">{{ c.sub }}</span></span>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 5 Business model -->
+  <section data-document-role="page" data-label="Business model" data-speaker-notes="Unit economics: sprint to retainer to SaaS. CAC is founder time via the audit-first organic motion." style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 80px 110px 70px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 20px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>BUSINESS MODEL</div>
+    <h2 style="font-size: 62px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 56px; max-width: 1400px;">Services fund the products. Products scale the business.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 90px 1fr 90px 1fr; align-items: stretch; flex: 1;">
+      <sc-for list="{{ flywheel }}" as="s" hint-placeholder-count="3">
+        <div style="display: contents;">
+          <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 18px;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: #0a0a0a; color: #f5f5f2; font-size: 22px; display: flex; align-items: center; justify-content: center;">{{ s.n }}</div>
+            <div style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">{{ s.t }}</div>
+            <div style="font-size: 22px; line-height: 1.5; color: #6e6e68;">{{ s.d }}</div>
+            <div style="margin-top: auto; font-size: 20px; color: #9a9a94; font-family: monospace;">{{ s.tag }}</div>
+          </div>
+          <sc-if value="{{ s.arrow }}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; align-items: center; justify-content: center; font-size: 40px; color: #e8541e;">→</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 44px; display: flex; align-items: center; gap: 18px; font-size: 26px; font-weight: 500;"><span style="width: 14px; height: 14px; background: #e8541e;"></span>Every client teaches the platform.<span style="font-size: 22px; font-weight: 400; color: #9a9a94; margin-left: 8px;">Usage data loops back to stage 1, compounding margin.</span></div>
+    <div style="margin-top: 20px; background: #ffffff; border: 1px solid #e4e4df; border-radius: 999px; padding: 18px 40px; text-align: center; font-size: 21px; color: #55554f;">Sprint $4,000–5,500 → Retainer from $3,000/mo → SaaS $99–299/mo per product · CAC ≈ founder time (organic, audit-first) · Target: services under 50% of revenue by Q2 2027</div>
+  </section>
+
+  <!-- 6 Market -->
+  <section data-document-role="page" data-label="Market" data-speaker-notes="Sources: MENA digital ad growth 17.8% YoY, fastest globally; WPP: generative search from 1% to 20% of regional search revenue by 2031." style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>MARKET</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 72px; max-width: 1300px;">A new category is forming. We enter to MENA as native player.</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <sc-for list="{{ market }}" as="m" hint-placeholder-count="3">
+        <div style="border-top: 4px solid {{ m.rule }}; padding-top: 32px;">
+          <div style="font-size: 22px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94; margin-bottom: 16px;">{{ m.label }}</div>
+          <div style="font-size: 76px; font-weight: 600; letter-spacing: -.03em; line-height: 1; color: {{ m.c }};">{{ m.v }}</div>
+          <div style="font-size: 24px; color: #6e6e68; line-height: 1.5; margin-top: 18px;">{{ m.d }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: auto; background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 36px 44px; font-size: 26px; line-height: 1.5; max-width: 100%;"><span style="font-weight: 600;">The wedge:</span> MENA is the world’s fastest-growing digital ad region (17.8% YoY). WPP forecasts generative search growing from 1% to 20% of regional search revenue by 2031. Every GEO tool is English-first and MENA-blind. Arabic coverage and regional data are ours to own.</div>
+  </section>
+
+  <!-- 7 Traction -->
+  <section data-document-role="page" data-label="Traction" data-speaker-notes="Everything self-funded from $50k of founder services revenue, zero dilution. Steer: private beta Q3 2026, public launch Q4 2026." style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>TRACTION</div>
+    <h2 style="font-size: 62px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 56px;">Bootstrapped discipline: everything below was funded by $50k of founder revenue.</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 28px; flex: 1;">
+      <sc-for list="{{ traction }}" as="t" hint-placeholder-count="6">
+        <div style="background: {{ t.bg }}; color: {{ t.fg }}; border: 1px solid {{ t.border }}; border-radius: 20px; padding: 36px 40px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 44px; font-weight: 600; letter-spacing: -.02em; color: {{ t.c }};">{{ t.v }}</div>
+          <div style="font-size: 22px; line-height: 1.45; color: {{ t.lc }};">{{ t.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 32px; font-size: 20px; color: #82827c; font-family: monospace;">Steer: in development on the Hint engine &mdash; private beta Q3 2026, public launch Q4 2026</div>
+  </section>
+
+  <!-- 8 Founding team -->
+  <section data-document-role="page" data-label="Founding team" data-speaker-notes="Commercial + technical founding pair. Drop real headshots onto the two circles. Wasim: strategy, GTM, product. Abdul: platform architecture, shared engine, infrastructure." style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>TEAM</div>
+    <h2 style="font-size: 62px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 48px;">Commercial + technical. Vouched trust, proven shipping.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; flex: 1;">
+      <sc-for list="{{ founders }}" as="f" hint-placeholder-count="2">
+        <div style="background: {{ f.bg }}; color: {{ f.fg }}; border: 1px solid {{ f.border }}; border-radius: 20px; padding: 44px 48px; display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: flex; align-items: center; gap: 28px; margin-bottom: 8px;">
+            <image-slot id="{{ f.slotId }}" shape="circle" style="width: 140px; height: 140px; flex: none;" placeholder="Headshot"></image-slot>
+            <div>
+              <div style="font-size: 36px; font-weight: 600; letter-spacing: -.02em;">{{ f.name }} <span style="font-size: 22px; font-weight: 400; color: {{ f.muted }};">{{ f.cred }}</span></div>
+              <div style="font-size: 23px; color: #e8541e; font-weight: 600; margin-top: 6px;">{{ f.role }}</div>
+            </div>
+          </div>
+          <div style="font-size: 23px; line-height: 1.55; color: {{ f.body }};">{{ f.bio }}</div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <sc-for list="{{ f.points }}" as="p" hint-placeholder-count="2">
+              <div style="font-size: 21px; line-height: 1.45; display: flex; gap: 14px; align-items: baseline; color: {{ f.body }};"><span style="color: #e8541e;">—</span><span>{{ p }}</span></div>
+            </sc-for>
+          </div>
+          <div style="margin-top: auto; font-size: 20px; color: {{ f.muted }}; font-family: monospace;">Owns: {{ f.owns }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 32px; background: #ffffff; border: 1px solid #e4e4df; border-radius: 999px; padding: 20px 44px; text-align: center; font-size: 22px; color: #55554f;">+ Muhammad Ahmad Sherazi, Automation Engineer · 70/30 founder equity · First hires post-funding: senior engineer, AI/data engineer</div>
+  </section>
+
+  <!-- 9 Competition -->
+  <section data-document-role="page" data-label="Competition" data-speaker-notes="2x2: X monitoring-only to full-loop execution, Y global generic to MENA-native. Swap bracketed competitor names for the real set before submitting. Caveat stays." style="background: #0a0a0a; color: #f2f2ee; display: flex; flex-direction: column; padding: 80px 110px 60px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #8f8f89; margin-bottom: 20px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>COMPETITION</div>
+    <h2 style="font-size: 58px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 40px;">Point tools everywhere. No one owns the full loop.</h2>
+    <div style="flex: 1; position: relative; border-left: 2px solid #2a2a26; border-bottom: 2px solid #2a2a26; margin: 0 40px 40px 60px;">
+      <div style="position: absolute; left: -50px; top: 50%; writing-mode: vertical-rl; transform: translateY(-50%) rotate(180deg); font-size: 19px; letter-spacing: .08em; color: #8f8f89; white-space: nowrap;">GLOBAL GENERIC → MENA-NATIVE</div>
+      <div style="position: absolute; bottom: -44px; left: 0; right: 0; text-align: center; font-size: 19px; letter-spacing: .08em; color: #8f8f89;">MONITORING ONLY → FULL-LOOP EXECUTION</div>
+      <div style="position: absolute; left: 50%; top: 0; bottom: 0; border-left: 1px dashed #2a2a26;"></div>
+      <div style="position: absolute; top: 50%; left: 0; right: 0; border-top: 1px dashed #2a2a26;"></div>
+      <sc-for list="{{ compDots }}" as="d" hint-placeholder-count="12">
+        <div style="position: absolute; left: {{ d.x }}%; top: {{ d.y }}%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 8px;">
+          <span style="width: {{ d.size }}px; height: {{ d.size }}px; border-radius: 50%; background: {{ d.c }};"></span>
+          <span style="font-size: {{ d.fs }}px; color: {{ d.tc }}; white-space: nowrap; font-weight: {{ d.fw }};">{{ d.t }}</span>
+        </div>
+      </sc-for>
+      <div style="position: absolute; right: 3%; top: 6%; background: rgba(232,84,30,.12); border: 1px solid rgba(232,84,30,.55); border-radius: 16px; padding: 22px 30px;">
+        <div style="font-size: 30px; font-weight: 600;">SanityAI</div>
+        <div style="font-size: 20px; color: #e8a17e;">Hint + Steer · execution + attribution</div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-top: 28px;">
+      <div style="display: flex; gap: 28px; font-size: 19px; color: #8f8f89;">
+        <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #55554f; margin-right: 8px;"></span>GEO / AI-visibility tools</span>
+        <span><span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #8f8f89; margin-right: 8px;"></span>Performance / audit tools</span>
+      </div>
+      <div style="font-size: 18px; color: #6e6e68; font-family: monospace;">Positions approximate, based on public product scope, July 2026.</div>
+    </div>
+  </section>
+
+  <!-- 10 Saudi Arabia -->
+  <section data-document-role="page" data-label="Saudi Arabia" data-speaker-notes="Sanabil is PIF-owned; this slide answers 'why should Saudi capital care' directly." style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>SAUDI ARABIA</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 64px; max-width: 1300px;">KSA is the expansion market, not an afterthought.</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; flex: 1;">
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">ICP concentration</div>
+        <div style="font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">A third of our target market</div>
+        <div style="font-size: 23px; line-height: 1.55; color: #6e6e68;">Funded Saudi SaaS and digital-first enterprises in Riyadh make up a third of the MENA companies we sell to.</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">Product fit</div>
+        <div style="font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">Built for Saudi buyers first</div>
+        <div style="font-size: 23px; line-height: 1.55; color: #6e6e68;">Arabic AI-answer coverage ships in Hint Q1 2027, designed for Saudi buyers before anyone else.</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">Commitment</div>
+        <div style="font-size: 32px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2;">KSA entity in the seed window</div>
+        <div style="font-size: 23px; line-height: 1.55; color: #6e6e68;">Entity planned within the accelerator-to-seed window; the audit-first GTM replicated with Riyadh design partners.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 Roadmap -->
+  <section data-document-role="page" data-label="Roadmap" data-speaker-notes="Five dated milestones through Q2 2027. Steer beta and launch dates match the traction slide footnote." style="background: #f0f0eb; color: #141414; display: flex; flex-direction: column; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 24px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>ROADMAP</div>
+    <h2 style="font-size: 64px; font-weight: 600; letter-spacing: -.02em; line-height: 1.12; margin: 0 0 40px;">The next 12 months, dated.</h2>
+    <div style="display: flex; flex-direction: column; justify-content: center; flex: 1;">
+      <sc-for list="{{ milestones }}" as="m" hint-placeholder-count="5">
+        <div style="display: flex; align-items: center; gap: 40px; border-top: 1px solid #d8d8d2; padding: 28px 0;">
+          <span style="font-family: monospace; font-size: 26px; color: #e8541e; width: 190px; flex: none;">{{ m.q }}</span>
+          <span style="font-size: 32px; font-weight: 500; letter-spacing: -.01em;">{{ m.t }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- 12 The round -->
+  <section data-document-role="page" data-label="The round" data-speaker-notes="Raised to date: $0, fully founder-funded. Pre-seed open; the accelerator's $100k+ investment forms part of the round. Use of funds: 60% engineering, 25% infrastructure, 15% GTM." style="background: #fbfbfa; color: #141414; display: flex; flex-direction: column; padding: 80px 110px 70px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="display: flex; align-items: center; gap: 14px; font-size: 22px; color: #9a9a94; margin-bottom: 20px;"><span style="width: 13px; height: 13px; background: #e8541e; display: inline-block;"></span>THE ROUND</div>
+    <h2 style="font-size: 62px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 0 0 48px;">Bootstrapped to product. Raising pre-seed to scale.</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 28px; flex: 1;">
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">Raised to date</div>
+        <div style="font-size: 84px; font-weight: 600; letter-spacing: -.03em;">$0</div>
+        <div style="font-size: 23px; line-height: 1.5; color: #6e6e68;">Fully founder-funded to working product, live integrations, and revenue.</div>
+      </div>
+      <div style="background: #0a0a0a; color: #f2f2ee; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #e8541e;">Raising now</div>
+        <div style="font-size: 52px; font-weight: 600; letter-spacing: -.02em;">Pre-seed</div>
+        <div style="font-size: 23px; line-height: 1.5; color: #b5b5af;">The accelerator’s $100k+ investment forms part of the round.</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 20px; padding: 44px 42px; display: flex; flex-direction: column; gap: 24px;">
+        <div style="font-size: 20px; letter-spacing: .06em; text-transform: uppercase; color: #9a9a94;">Use of funds</div>
+        <div style="display: flex; align-items: center; gap: 32px; flex: 1;">
+          <div style="width: 160px; height: 160px; border-radius: 50%; background: conic-gradient(#e8541e 0 60%, #141414 60% 85%, #b5b0a8 85% 100%); position: relative; flex: none;">
+            <div style="position: absolute; inset: 36px; border-radius: 50%; background: #ffffff;"></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 14px; font-size: 22px;">
+            <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #e8541e; flex: none;"></span><span style="font-weight: 600;">60%&nbsp;</span>engineering (two hires)</div>
+            <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #141414; flex: none;"></span><span style="font-weight: 600;">25%&nbsp;</span>monitoring / audit infrastructure</div>
+            <div style="display: flex; align-items: center; gap: 12px;"><span style="width: 12px; height: 12px; border-radius: 50%; background: #b5b0a8; flex: none;"></span><span style="font-weight: 600;">15%&nbsp;</span>GTM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 32px; background: #0a0a0a; color: #f2f2ee; border-radius: 999px; padding: 20px 44px; text-align: center; font-size: 22px;"><span style="font-weight: 600;">Milestone the round buys:</span> 25 paying subscription customers and a MENA-native product no US incumbent can match by Q1 2027.</div>
+  </section>
+
+  <!-- 13 Close -->
+  <section data-document-role="page" data-label="Close" data-speaker-notes="Close: AI decides who gets found and where money leaks; we built the platform that wins both, for MENA first." style="background: #0a0a0a; color: #f2f2ee; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 90px 110px; box-sizing: border-box; font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;">
+    <div style="position: absolute; inset: 0; display: flex; justify-content: flex-end; gap: 12px; padding-right: 60px;">
+      <sc-for list="{{ coverBars }}" as="b" hint-placeholder-count="14">
+        <div style="width: 5px; height: {{ b.h }}%; background: #e8541e; opacity: {{ b.o }}; align-self: flex-end;"></div>
+      </sc-for>
+    </div>
+    <div style="position: relative; max-width: 1400px;">
+      <h2 style="font-size: 88px; font-weight: 600; letter-spacing: -.03em; line-height: 1.08; margin: 0 0 48px;">AI decides who gets found and where money leaks. We built the platform that wins both — for MENA first.</h2>
+      <div style="display: flex; gap: 28px; align-items: center;">
+        <span style="background: #f2f2ee; color: #0a0a0a; font-size: 26px; font-weight: 500; padding: 22px 48px; border-radius: 999px;">Book a call →</span>
+        <span style="font-size: 24px; color: #a5a59f; font-family: monospace;">Wasim Ullah · wasim@sanity.ai · +971 55 756 8805 · sanity.ai · hint.fyi</span>
+      </div>
+    </div>
+  </section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    const mkBars = (n, seed) => {
+      const arr = [];
+      for (let i = 0; i < n; i++) arr.push({ h: Math.round((35 + ((i * seed) % 60)) * 0.7), o: 0.25 + ((i * 29) % 60) / 100 });
+      return arr;
+    };
+    return {
+      coverBars: mkBars(14, 19),
+      problems: [
+        { tag: 'Discovery', t: 'Brands are invisible in AI answers', d: 'Buyers ask ChatGPT, Perplexity, and Gemini before they ever hit Google. Most brands don\u2019t know if they\u2019re mentioned, cited, or misrepresented \u2014 and can\u2019t attribute the traffic that AI referrals already send.', stat: '37% of product research now starts in an AI assistant, not Google' },
+        { tag: 'Performance', t: 'Budgets leak where nobody is looking', d: 'Wasted spend, broken attribution, misfiring pixels, and misallocated budgets sit undetected between quarterly audits. The findings arrive as PDFs; the fixes never ship.', stat: 'Only $0.36 of every programmatic ad dollar reaches a consumer' },
+      ],
+      hintBars: [58, 42, 75, 35, 88, 50, 68, 30, 95, 60].map((h, i) => ({ h, c: i === 8 ? '#e8541e' : '#2f2f2b' })),
+      steerRows: [
+        { t: 'Pixel misfiring on checkout', pill: 'fix ready', bg: 'rgba(232,84,30,.18)', fg: '#e8a17e' },
+        { t: 'Budget skewed to fatigued ad set', pill: 'fix ready', bg: 'rgba(232,84,30,.18)', fg: '#e8a17e' },
+        { t: 'UTM scheme consistent', pill: 'healthy', bg: 'rgba(120,180,120,.15)', fg: '#8fbf8f' },
+      ],
+      diffRows: [
+        { label: 'AI visibility', them: 'Monitoring-only GEO tools: dashboards of mentions, no path from insight to action.', usLabel: 'Hint', us: 'Monitoring + execution + revenue attribution, with MENA and Arabic coverage no one else ships.' },
+        { label: 'Performance', them: 'Static dashboards and one-off audit consultants: findings as PDFs, fixes left to you.', usLabel: 'Steer', us: 'Continuous automated detection that generates the fix, not just the finding.' },
+      ],
+      ipChips: [
+        { t: 'Hint platform', sub: '' },
+        { t: 'Steer engine', sub: '' },
+        { t: 'GEO Readiness Auditor', sub: '\u00b7 live on Chrome Web Store' },
+        { t: 'ai-referral-attribution-kit', sub: '\u00b7 open source, GitHub' },
+      ],
+      flywheel: [
+        { n: '1', t: 'Sprints', d: 'GEO and performance sprints for funded MENA SaaS. Cash-flow positive from day one.', tag: 'Sprint $4,000–5,500', arrow: true },
+        { n: '2', t: 'Subscriptions', d: 'Sprint clients convert to Hint and Steer subscriptions once the engine is wired into their stack.', tag: 'SaaS $99–299/mo per product', arrow: true },
+        { n: '3', t: 'Compounding data', d: 'Product usage data sharpens both engines, lowering delivery cost and raising margin on every next client.', tag: 'margin \u2191 per cohort', arrow: false },
+      ],
+      market: [
+        { label: 'TAM', v: '$97B', d: 'Global spend on search visibility + ad performance tooling.', c: '#141414', rule: '#0a0a0a' },
+        { label: 'SAM', v: '$2.4B', d: 'GEO and automated audit tooling for B2B SaaS and DTC.', c: '#141414', rule: '#0a0a0a' },
+        { label: 'SOM', v: '$12M', d: 'Funded MENA SaaS and Gulf enterprises, English + Arabic.', c: '#e8541e', rule: '#e8541e' },
+      ],
+      traction: (() => {
+        const light = { bg: '#ffffff', fg: '#141414', border: '#e4e4df', c: '#141414', lc: '#6e6e68' };
+        return [
+          { ...light, bg: '#0a0a0a', fg: '#f2f2ee', border: '#0a0a0a', c: '#e8541e', lc: '#b5b5af', v: '$50,000', l: 'collected services revenue, trailing 12 months \u2014 self-funded, zero dilution' },
+          { ...light, v: 'Hint in public beta', l: 'hint.fyi live and open to sign-ups' },
+          { ...light, v: 'Approved', l: 'Meta integration passed App Review (ads_read, ads_management, pages)' },
+          { ...light, v: '9 active engagements', l: 'client work across the US, UK, UAE, and Singapore' },
+          { ...light, v: '30+ clients', l: 'served across the founder\u2019s career, including AXA Gulf, Hearst, AD Ports, IFFCO' },
+          { ...light, v: 'Shipped in public', l: 'GEO Readiness Auditor live on Chrome Web Store \u00b7 ai-referral-attribution-kit open source on GitHub' },
+        ];
+      })(),
+      compDots: [
+        { t: 'Profound', x: 30, y: 52, geo: true }, { t: 'Evertune', x: 26, y: 62, geo: true }, { t: 'Otterly.AI', x: 10, y: 84, geo: true },
+        { t: 'Peec AI', x: 8, y: 72, geo: true }, { t: 'AthenaHQ', x: 14, y: 60, geo: true }, { t: 'Semrush (AI Toolkit)', x: 20, y: 88, geo: true },
+        { t: 'Ahrefs (Brand Radar)', x: 17, y: 76, geo: true }, { t: 'Writesonic / Shadow', x: 58, y: 86, geo: true },
+        { t: 'TrueClicks', x: 34, y: 80, geo: false }, { t: 'Optmyzr', x: 52, y: 92, geo: false }, { t: 'Adalysis', x: 24, y: 94, geo: false },
+      ].map(d => ({ ...d, size: 12, fs: 18, c: d.geo ? '#55554f' : '#8f8f89', tc: '#8f8f89', fw: 400 })),
+      founders: [
+        { slotId: 'headshot-wasim', name: 'Wasim Ullah', cred: 'MCIM', role: 'Founder & CEO · Dubai', bg: '#0a0a0a', fg: '#f2f2ee', border: '#0a0a0a', muted: '#8f8f89', body: '#b5b5af',
+          bio: '11+ years GCC performance marketing and martech.',
+
+          points: ['Toptal Verified Expert (top 3%) \u00b7 Toptal Community Leader UAE', 'Published: Toptal, Entrepreneur.com', '$1M+ attributable revenue \u00b7 60% CPA reduction across four GCC markets'],
+          owns: 'strategy, GTM, product' },
+        { slotId: 'headshot-abdul', name: 'Abdul Rehman', cred: '', role: 'Co-founder & CTO · Gujranwala', bg: '#ffffff', fg: '#141414', border: '#e4e4df', muted: '#9a9a94', body: '#55554f',
+          bio: 'MERN stack developer and automation specialist. Builds high-performance web applications and designs automated n8n workflows that streamline software operations.',
+          points: [],
+          owns: 'platform architecture, shared Hint/Steer engine, n8n orchestration, API integrations' },
+      ],
+      milestones: [
+        { t: 'Steer private beta', q: 'Q3 2026' },
+        { t: 'Steer public launch', q: 'Q4 2026' },
+        { t: 'Arabic AI-visibility coverage in Hint, with Riyadh design partners', q: 'Q1 2027' },
+        { t: '25 subscription customers across both products', q: 'Q1 2027' },
+        { t: 'Services below 50% of revenue', q: 'Q2 2027' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
