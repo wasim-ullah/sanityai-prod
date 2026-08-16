@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#FAFAF8"></rect><rect x="14" y="20" width="34" height="34" fill="#FF7A59"></rect><rect x="52" y="20" width="34" height="34" fill="#C8B6E2"></rect><rect x="14" y="58" width="72" height="22" fill="#A8C3A5"></rect></svg></template>
+<title>SanityAI — Growth systems for the AI search era</title>
+<meta name="description" content="SanityAI builds the growth engine behind your revenue: CRM, lifecycle, paid and AI-powered operations, engineered as one system your team ends up owning.">
+<meta property="og:title" content="SanityAI — Growth systems for the AI search era">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="uploads/icon copy.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&family=Instrument+Sans:ital,wght@0,400..600;1,400&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #FAFAF8; color: #0A0A0A; font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #4a4a46; }
+  :focus-visible { outline: 2px solid #FF7A59; outline-offset: 3px; }
+  @keyframes cueDrop { 0% { transform: translateY(-4px); opacity: .3; } 50% { transform: translateY(6px); opacity: 1; } 100% { transform: translateY(-4px); opacity: .3; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</helmet>
+
+<div style="position: relative; overflow-x: hidden;">
+
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true" focusable="false"><defs>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch"></feTurbulence><feColorMatrix type="saturate" values="0"></feColorMatrix><feComponentTransfer><feFuncA type="linear" slope="0.5"></feFuncA></feComponentTransfer></filter>
+  <filter id="dither"><feTurbulence type="turbulence" baseFrequency="0.55" numOctaves="2" result="t"></feTurbulence><feComponentTransfer in="t" result="d"><feFuncR type="discrete" tableValues="0 1"></feFuncR><feFuncG type="discrete" tableValues="0 1"></feFuncG><feFuncB type="discrete" tableValues="0 1"></feFuncB></feComponentTransfer><feComposite in="SourceGraphic" in2="d" operator="in"></feComposite></filter>
+  <linearGradient id="gCoral" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF7A59"></stop><stop offset="100%" stop-color="#0A0A0A"></stop></linearGradient>
+  <linearGradient id="gLav" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#C8B6E2"></stop><stop offset="100%" stop-color="#0A0A0A"></stop></linearGradient>
+  <linearGradient id="gSage" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A8C3A5"></stop><stop offset="100%" stop-color="#0A0A0A"></stop></linearGradient>
+</defs></svg>
+
+<!-- ══ NAV ══ -->
+<header data-nav="true" style="position: fixed; top: 0; left: 0; right: 0; z-index: 90; border-bottom: 1px solid transparent; transition: background 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: 12px clamp(16px, 3vw, 36px); display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+    <a href="#top" aria-label="SanityAI, home" style="background: #0A0A0A; padding: 9px 14px; display: flex; align-items: center; gap: 9px; flex-shrink: 0;">
+      <span style="width: 9px; height: 9px; background: #FF7A59; display: inline-block;"></span>
+      <span style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: -.01em; color: #FAFAF8;">Sanity<span style="color: #999993;">AI</span></span>
+    </a>
+    <nav aria-label="Primary" style="display: flex; align-items: center; gap: clamp(4px, 1vw, 10px);">
+      <button type="button" onClick="{{ openMenu }}" data-navlink="true" style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; background: none; border: none; cursor: pointer; padding: 8px 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 7px; transition: background 200ms ease, color 200ms ease;" style-hover="background: #C8B6E2; color: #0A0A0A;">Index <span aria-hidden="true" style="font-size: 13px;">+</span></button>
+      <a href="#data" data-navlink="true" style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; padding: 8px 12px; border-radius: 999px; display: none; align-items: center; gap: 7px; transition: background 200ms ease, color 200ms ease;" data-wide="true" style-hover="background: #C8B6E2; color: #0A0A0A;">Evidence <span aria-hidden="true" style="font-size: 13px;">+</span></a>
+      <a href="#systems" data-navlink="true" style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; padding: 8px 12px; border-radius: 999px; display: none; align-items: center; gap: 7px; transition: background 200ms ease, color 200ms ease;" data-wide="true" style-hover="background: #C8B6E2; color: #0A0A0A;">How it works <span aria-hidden="true" style="font-size: 13px;">+</span></a>
+      <a href="https://cal.com/wasim/sanity" target="_blank" rel="noopener" style="background: #FF7A59; color: #0A0A0A; font-family: 'Schibsted Grotesk', sans-serif; font-size: 13px; font-weight: 500; padding: 10px 18px; white-space: nowrap;">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══ HERO ══ -->
+<main id="top">
+<section aria-label="Introduction" style="position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding: 120px clamp(16px, 3vw, 36px) clamp(28px, 4vw, 48px); max-width: 1440px; margin: 0 auto; box-sizing: border-box; overflow: hidden;">
+
+  <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+    <div data-parallax="0.18" style="position: absolute; top: 6%; left: 46%; width: 46vw; height: 46vw; background: radial-gradient(circle at 32% 32%, #FF7A59 0%, rgba(255,122,89,0) 62%); filter: blur(38px); opacity: .5;"></div>
+    <div data-parallax="0.1" style="position: absolute; top: 22%; left: 30%; width: 34vw; height: 34vw; background: radial-gradient(circle at 60% 40%, #C8B6E2 0%, rgba(200,182,226,0) 66%); filter: blur(44px); opacity: .55;"></div>
+    <div data-parallax="0.26" style="position: absolute; top: 44%; left: 62%; width: 26vw; height: 26vw; background: radial-gradient(circle at 40% 60%, #A8C3A5 0%, rgba(168,195,165,0) 66%); filter: blur(40px); opacity: .5;"></div>
+    <svg width="100%" height="100%" style="position: absolute; inset: 0; opacity: .16; mix-blend-mode: multiply;"><rect width="100%" height="100%" filter="url(#grain)"></rect></svg>
+  </div>
+
+  <!-- scroll collage: converges + fades into the settled hero -->
+  <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none;">
+    <div data-crop="true" data-dx="-150" data-dy="130" style="position: absolute; top: 8%; right: 30%; width: 132px; background: #FAFAF8; padding: 8px 8px 26px; box-shadow: 0 18px 40px rgba(10,10,10,.13); transform: rotate(-7deg);">
+      <svg viewBox="0 0 100 76" width="100%" style="display: block;"><rect width="100" height="76" fill="url(#gCoral)" filter="url(#dither)"></rect></svg>
+      <span style="position: absolute; bottom: 8px; left: 9px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">Head of growth</span>
+    </div>
+    <div data-crop="true" data-dx="-120" data-dy="-120" style="position: absolute; top: 6%; right: 4%; width: 116px; background: #FAFAF8; padding: 8px 8px 26px; box-shadow: 0 18px 40px rgba(10,10,10,.13); transform: rotate(5deg);">
+      <svg viewBox="0 0 100 76" width="100%" style="display: block;"><rect width="100" height="76" fill="url(#gLav)" filter="url(#dither)"></rect></svg>
+      <span style="position: absolute; bottom: 8px; left: 9px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">RevOps lead</span>
+    </div>
+    <div data-crop="true" data-dx="90" data-dy="150" style="position: absolute; top: 24%; right: 16%; width: 108px; background: #FAFAF8; padding: 8px 8px 26px; box-shadow: 0 18px 40px rgba(10,10,10,.13); transform: rotate(9deg);">
+      <svg viewBox="0 0 100 76" width="100%" style="display: block;"><rect width="100" height="76" fill="url(#gSage)" filter="url(#dither)"></rect></svg>
+      <span style="position: absolute; bottom: 8px; left: 9px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">CMO</span>
+    </div>
+    <div data-crop="true" data-dx="140" data-dy="-80" style="position: absolute; top: 38%; right: 2%; width: 138px; background: #FAFAF8; padding: 8px 8px 26px; box-shadow: 0 18px 40px rgba(10,10,10,.13); transform: rotate(-4deg);">
+      <svg viewBox="0 0 100 76" width="100%" style="display: block;"><rect width="100" height="76" fill="url(#gCoral)" filter="url(#dither)"></rect></svg>
+      <span style="position: absolute; bottom: 8px; left: 9px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">Founder, seed SaaS</span>
+    </div>
+    <div data-crop="true" data-dx="110" data-dy="90" style="position: absolute; top: 14%; left: 3%; width: 104px; background: #FAFAF8; padding: 8px 8px 26px; box-shadow: 0 18px 40px rgba(10,10,10,.13); transform: rotate(7deg);">
+      <svg viewBox="0 0 100 76" width="100%" style="display: block;"><rect width="100" height="76" fill="url(#gLav)" filter="url(#dither)"></rect></svg>
+      <span style="position: absolute; bottom: 8px; left: 9px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">Demand gen</span>
+    </div>
+    <div data-crop="true" data-dx="-70" data-dy="-110" style="position: absolute; top: 20%; right: 44%; width: 96px; background: #FAFAF8; padding: 8px 8px 26px; box-shadow: 0 18px 40px rgba(10,10,10,.13); transform: rotate(-9deg);">
+      <svg viewBox="0 0 100 76" width="100%" style="display: block;"><rect width="100" height="76" fill="url(#gSage)" filter="url(#dither)"></rect></svg>
+      <span style="position: absolute; bottom: 8px; left: 9px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">Analytics</span>
+    </div>
+  </div>
+
+  <div style="position: relative; display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: end;" data-hero-grid="true">
+    <div>
+      <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: 0 0 clamp(18px, 3vw, 30px);">The 2026 growth systems report · Dubai</p>
+      <h1 style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(44px, 9.2vw, 104px); font-weight: 500; line-height: .98; letter-spacing: -.035em; margin: 0; max-width: 15ch; text-wrap: balance;">Your growth is a system. We build it like one.</h1>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 22px; max-width: 46ch;">
+      <p style="font-size: 17px; line-height: 1.6; color: #3A3A36; margin: 0;">SanityAI engineers the machinery behind revenue — CRM, lifecycle, paid, analytics and AI-powered operations — assembled as one system, documented, and handed to your team.</p>
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <a href="#systems" style="background: #0A0A0A; color: #FAFAF8; font-family: 'Schibsted Grotesk', sans-serif; font-size: 14px; font-weight: 500; padding: 14px 24px;">See how it works</a>
+        <a href="https://cal.com/wasim/sanity" target="_blank" rel="noopener" style="font-size: 14px; font-weight: 500; border-bottom: 1px solid #C4C4BE; padding-bottom: 2px;">Book a call</a>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-top: 6px;">
+        <span aria-hidden="true" style="display: inline-block; width: 1px; height: 26px; background: #0A0A0A; animation: cueDrop 2.4s ease-in-out infinite;"></span>
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66;">Scroll · By Wasim Ullah, Founder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 01 SYSTEMS · CORAL ══ -->
+<section id="systems" aria-labelledby="h-systems">
+  <div style="position: relative; background: #FF7A59; overflow: hidden;">
+    <div aria-hidden="true" data-parallax="0.14" style="position: absolute; top: -30%; right: -6%; width: 44vw; height: 44vw; background: radial-gradient(circle at 40% 40%, rgba(10,10,10,.5) 0%, rgba(10,10,10,0) 64%); filter: blur(30px);"></div>
+    <svg aria-hidden="true" width="100%" height="100%" style="position: absolute; inset: 0; opacity: .2; mix-blend-mode: multiply;"><rect width="100%" height="100%" filter="url(#grain)"></rect></svg>
+    <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(52px, 8vw, 104px) clamp(16px, 3vw, 36px);">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-bottom: 1px solid rgba(10,10,10,.22); padding-bottom: 16px; margin-bottom: clamp(28px, 5vw, 56px);">
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;">01.Systems</span>
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(10,10,10,.6);">Fig. 01</span>
+      </div>
+      <h2 id="h-systems" data-reveal="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(36px, 7.6vw, 92px); font-weight: 500; line-height: 1; letter-spacing: -.035em; margin: 0; max-width: 18ch; text-wrap: balance;">One engine, not eleven disconnected tools.</h2>
+    </div>
+  </div>
+  <div aria-hidden="true" style="display: grid; grid-template-columns: 1.6fr 1fr;">
+    <svg viewBox="0 0 160 58" width="100%" style="display: block; height: clamp(150px, 22vw, 300px);"><rect width="160" height="58" fill="url(#gCoral)" filter="url(#dither)"></rect></svg>
+    <svg viewBox="0 0 100 58" width="100%" style="display: block; height: clamp(150px, 22vw, 300px);"><rect width="100" height="58" fill="#0A0A0A"></rect><rect width="100" height="58" fill="url(#gCoral)" filter="url(#dither)" opacity=".6"></rect></svg>
+  </div>
+  <div style="max-width: 1440px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(16px, 3vw, 36px);">
+    <div data-cols="true" style="display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 3vw, 44px); max-width: 1080px;">
+      <p style="font-size: 17px; line-height: 1.62; color: #3A3A36; margin: 0;">Most growth stalls are not strategy failures. They are plumbing failures: a CRM nobody trusts, three sources of truth, lifecycle emails that fire off stale fields, and a paid budget optimising toward the wrong event. We start by mapping the whole path — first touch to renewal — then rebuild it as a single documented system.</p>
+      <p style="font-size: 17px; line-height: 1.62; color: #3A3A36; margin: 0;">Every workflow we ship is instrumented, versioned, and written down. When the engagement ends, your team owns the engine and can extend it without us. That is the point: no black boxes, no dependency, no retainer you cannot leave.</p>
+    </div>
+    <aside style="margin-top: clamp(28px, 4vw, 48px); max-width: 640px; background: #F0F4F8; padding: clamp(20px, 3vw, 30px);">
+      <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: 0 0 10px;">A closer look</p>
+      <p style="font-size: 15.5px; line-height: 1.6; color: #1A1A18; margin: 0;"><strong style="font-weight: 600;">The two-week audit.</strong> We instrument your funnel, reconcile every source of truth, and hand back a ranked list of leaks with the revenue each one is costing. Most teams find the first fix pays for the audit.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ══ 02 SIGNAL · LAVENDER ══ -->
+<section id="signal" aria-labelledby="h-signal">
+  <div style="position: relative; background: #C8B6E2; overflow: hidden;">
+    <div aria-hidden="true" data-parallax="0.14" style="position: absolute; top: -26%; left: -6%; width: 42vw; height: 42vw; background: radial-gradient(circle at 50% 50%, rgba(10,10,10,.45) 0%, rgba(10,10,10,0) 64%); filter: blur(30px);"></div>
+    <svg aria-hidden="true" width="100%" height="100%" style="position: absolute; inset: 0; opacity: .2; mix-blend-mode: multiply;"><rect width="100%" height="100%" filter="url(#grain)"></rect></svg>
+    <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(52px, 8vw, 104px) clamp(16px, 3vw, 36px);">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-bottom: 1px solid rgba(10,10,10,.22); padding-bottom: 16px; margin-bottom: clamp(28px, 5vw, 56px);">
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;">02.Signal</span>
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(10,10,10,.6);">Fig. 02</span>
+      </div>
+      <h2 id="h-signal" data-reveal="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(36px, 7.6vw, 92px); font-weight: 500; line-height: 1; letter-spacing: -.035em; margin: 0; max-width: 18ch; text-wrap: balance;">You cannot fix what the dashboard refuses to show.</h2>
+    </div>
+  </div>
+  <div aria-hidden="true" style="display: grid; grid-template-columns: 1fr 1.6fr;">
+    <svg viewBox="0 0 100 58" width="100%" style="display: block; height: clamp(150px, 22vw, 300px);"><rect width="100" height="58" fill="#0A0A0A"></rect><rect width="100" height="58" fill="url(#gLav)" filter="url(#dither)" opacity=".65"></rect></svg>
+    <svg viewBox="0 0 160 58" width="100%" style="display: block; height: clamp(150px, 22vw, 300px);"><rect width="160" height="58" fill="url(#gLav)" filter="url(#dither)"></rect></svg>
+  </div>
+  <div style="max-width: 1440px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(16px, 3vw, 36px);">
+    <div data-cols="true" style="display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 3vw, 44px); max-width: 1080px;">
+      <p style="font-size: 17px; line-height: 1.62; color: #3A3A36; margin: 0;">AI assistants now sit between your buyer and your website, and most of that traffic arrives with its referrer stripped — filed under "direct" and quietly ignored. Meanwhile the highest-intent visitors you have look like nothing at all in GA4.</p>
+      <p style="font-size: 17px; line-height: 1.62; color: #3A3A36; margin: 0;">Steer classifies every AI platform at the edge and writes it back as a clean dimension, so your dashboards, your plugin and your attribution model finally agree on what counts. The same detection engine powers every free tool in the SanityAI Lab.</p>
+    </div>
+    <aside style="margin-top: clamp(28px, 4vw, 48px); max-width: 640px; background: #F0F4F8; padding: clamp(20px, 3vw, 30px);">
+      <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: 0 0 10px;">A closer look</p>
+      <p style="font-size: 15.5px; line-height: 1.6; color: #1A1A18; margin: 0;"><strong style="font-weight: 600;">One detection engine, everywhere.</strong> WordPress plugin, GTM template, Chrome extension and dashboards all share the same classification logic — twelve AI platforms, one definition of AI traffic.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<section aria-label="By the numbers" style="border-top: 1px solid #E4E4DE; border-bottom: 1px solid #E4E4DE;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: clamp(40px, 6vw, 76px) clamp(16px, 3vw, 36px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: clamp(24px, 4vw, 0px);">
+    <sc-for list="{{ stats }}" as="s" hint-placeholder-count="3">
+      <div style="padding: 0 clamp(0px, 3vw, 40px); border-left: 1px solid #E4E4DE;">
+        <div data-count="{{ s.to }}" data-suffix="{{ s.suffix }}" data-prefix="{{ s.prefix }}" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(52px, 8vw, 92px); font-weight: 500; line-height: .92; letter-spacing: -.04em;">{{ s.shown }}</div>
+        <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 17px; font-weight: 500; margin-top: 14px;">{{ s.label }}</div>
+        <div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin-top: 8px; line-height: 1.6;">{{ s.caption }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- ══ DATA ══ -->
+<section id="data" aria-labelledby="h-data" style="background: #FAFAF8;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: clamp(52px, 8vw, 104px) clamp(16px, 3vw, 36px);">
+    <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: 0 0 20px;">03.Evidence</p>
+    <h2 id="h-data" data-reveal="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(32px, 5.6vw, 68px); font-weight: 500; line-height: 1.02; letter-spacing: -.03em; margin: 0 0 clamp(36px, 5vw, 64px); max-width: 20ch; text-wrap: balance;">Where the traffic actually comes from.</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(32px, 5vw, 72px);">
+      <div data-reveal="true">
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: 0 0 22px;">Share of AI referral traffic by platform</p>
+        <svg viewBox="0 0 400 46" width="100%" role="img" aria-label="ChatGPT 87.4 percent, Perplexity 6.2 percent, Gemini 3.1 percent, all others 3.3 percent of AI referral traffic" style="display: block;">
+          <rect x="0" y="0" width="349" height="26" fill="#FF7A59"></rect>
+          <rect x="351" y="0" width="25" height="26" fill="#C8B6E2"></rect>
+          <rect x="378" y="0" width="12" height="26" fill="#A8C3A5"></rect>
+          <rect x="392" y="0" width="8" height="26" fill="#0A0A0A"></rect>
+          <line x1="0" y1="26" x2="400" y2="26" stroke="#0A0A0A" stroke-width="1"></line>
+        </svg>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px;">
+          <span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;"><span style="width: 9px; height: 9px; background: #FF7A59;"></span>ChatGPT 87.4%</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;"><span style="width: 9px; height: 9px; background: #C8B6E2;"></span>Perplexity 6.2%</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;"><span style="width: 9px; height: 9px; background: #A8C3A5;"></span>Gemini 3.1%</span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;"><span style="width: 9px; height: 9px; background: #0A0A0A;"></span>Others 3.3%</span>
+        </div>
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: #8A8A84; margin: 22px 0 0;">Source: Conductor, 2026</p>
+      </div>
+
+      <div data-reveal="true">
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: 0 0 22px;">Conversion rate by channel</p>
+        <svg viewBox="0 0 400 170" width="100%" role="img" aria-label="Conversion rate by channel: paid search 7.8 percent, ChatGPT referral 7.1 percent, organic search 4.2 percent, social 1.9 percent" style="display: block;">
+          <rect x="0" y="6" width="326" height="22" fill="#0A0A0A"></rect>
+          <rect x="0" y="46" width="297" height="22" fill="#FF7A59"></rect>
+          <rect x="0" y="86" width="176" height="22" fill="#C8B6E2"></rect>
+          <rect x="0" y="126" width="79" height="22" fill="#A8C3A5"></rect>
+          <text x="334" y="22" font-family="Geist Mono, monospace" font-size="12" fill="#0A0A0A">7.8%</text>
+          <text x="305" y="62" font-family="Geist Mono, monospace" font-size="12" fill="#0A0A0A">7.1%</text>
+          <text x="184" y="102" font-family="Geist Mono, monospace" font-size="12" fill="#0A0A0A">4.2%</text>
+          <text x="87" y="142" font-family="Geist Mono, monospace" font-size="12" fill="#0A0A0A">1.9%</text>
+          <line x1="0" y1="158" x2="400" y2="158" stroke="#0A0A0A" stroke-width="1"></line>
+        </svg>
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 22px; margin-top: 18px;">
+          <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;">Paid search</span>
+          <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;">ChatGPT referral</span>
+          <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;">Organic search</span>
+          <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: #3A3A36;">Social</span>
+        </div>
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: #8A8A84; margin: 22px 0 0;">Source: Similarweb, May 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 03 SCALE · SAGE ══ -->
+<section id="scale" aria-labelledby="h-scale">
+  <div style="position: relative; background: #A8C3A5; overflow: hidden;">
+    <div aria-hidden="true" data-parallax="0.14" style="position: absolute; bottom: -34%; right: -4%; width: 40vw; height: 40vw; background: radial-gradient(circle at 50% 50%, rgba(10,10,10,.4) 0%, rgba(10,10,10,0) 64%); filter: blur(30px);"></div>
+    <svg aria-hidden="true" width="100%" height="100%" style="position: absolute; inset: 0; opacity: .2; mix-blend-mode: multiply;"><rect width="100%" height="100%" filter="url(#grain)"></rect></svg>
+    <div style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(52px, 8vw, 104px) clamp(16px, 3vw, 36px);">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; border-bottom: 1px solid rgba(10,10,10,.22); padding-bottom: 16px; margin-bottom: clamp(28px, 5vw, 56px);">
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;">04.Scale</span>
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(10,10,10,.6);">Fig. 03</span>
+      </div>
+      <h2 id="h-scale" data-reveal="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(36px, 7.6vw, 92px); font-weight: 500; line-height: 1; letter-spacing: -.035em; margin: 0; max-width: 18ch; text-wrap: balance;">Automation is leverage, not headcount.</h2>
+    </div>
+  </div>
+  <div aria-hidden="true" style="display: grid; grid-template-columns: 1.2fr 1fr;">
+    <svg viewBox="0 0 120 58" width="100%" style="display: block; height: clamp(150px, 22vw, 300px);"><rect width="120" height="58" fill="url(#gSage)" filter="url(#dither)"></rect></svg>
+    <svg viewBox="0 0 100 58" width="100%" style="display: block; height: clamp(150px, 22vw, 300px);"><rect width="100" height="58" fill="#0A0A0A"></rect><rect width="100" height="58" fill="url(#gSage)" filter="url(#dither)" opacity=".55"></rect></svg>
+  </div>
+  <div style="max-width: 1440px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(16px, 3vw, 36px);">
+    <div data-cols="true" style="display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(20px, 3vw, 44px); max-width: 1080px;">
+      <p style="font-size: 17px; line-height: 1.62; color: #3A3A36; margin: 0;">A lean team with 184 production workflows outruns a large team doing the same work by hand. We build the boring machinery — enrichment, routing, scoring, reporting, follow-up — so the humans spend their hours on judgement calls instead of copy-paste.</p>
+      <p style="font-size: 17px; line-height: 1.62; color: #3A3A36; margin: 0;">Engagements run in three shapes: a two-week audit, a full build over three months, or an ongoing retainer after handover. All three end the same way — with documentation, dashboards, and a team that can run the engine without us.</p>
+    </div>
+    <div style="margin-top: clamp(32px, 5vw, 56px); display: flex; align-items: center; gap: 22px; flex-wrap: wrap;">
+      <a href="https://cal.com/wasim/sanity" target="_blank" rel="noopener" style="background: #0A0A0A; color: #FAFAF8; font-family: 'Schibsted Grotesk', sans-serif; font-size: 14px; font-weight: 500; padding: 14px 26px;">Book a call</a>
+      <a href="https://sanity.ai/lab" style="font-size: 14px; font-weight: 500; border-bottom: 1px solid #C4C4BE; padding-bottom: 2px;">Start with the free tools</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ QUOTES ══ -->
+<section aria-label="Field notes" style="max-width: 1440px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(16px, 3vw, 36px) clamp(60px, 9vw, 120px);">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(16px, 2.5vw, 28px);">
+    <sc-for list="{{ quotes }}" as="q" hint-placeholder-count="2">
+      <figure data-reveal="true" style="margin: 0; background: #F0F4F8; padding: clamp(26px, 4vw, 44px); display: flex; flex-direction: column; gap: 22px;">
+        <span aria-hidden="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: 56px; line-height: .6; color: #0A0A0A;">&ldquo;</span>
+        <blockquote style="margin: 0; font-size: clamp(18px, 2.1vw, 23px); line-height: 1.42; letter-spacing: -.015em; color: #0A0A0A;">{{ q.text }}</blockquote>
+        <figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto;">
+          <span aria-hidden="true" style="width: 44px; height: 44px; border-radius: 50%; background: {{ q.dot }}; flex-shrink: 0;"></span>
+          <span>
+            <span style="display: block; font-family: 'Schibsted Grotesk', sans-serif; font-size: 15px; font-weight: 500;">{{ q.name }}</span>
+            <span style="display: block; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin-top: 4px;">{{ q.role }}</span>
+          </span>
+        </figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer style="background: #0A0A0A; color: #FAFAF8; overflow: hidden;">
+  <div style="max-width: 1440px; margin: 0 auto; padding: clamp(48px, 7vw, 92px) clamp(16px, 3vw, 36px) clamp(24px, 3vw, 36px);">
+    <div aria-hidden="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(48px, 15vw, 190px); font-weight: 500; line-height: .84; letter-spacing: -.05em; color: transparent; -webkit-text-stroke: 1px #454540;">SANITYAI</div>
+    <div style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(48px, 15vw, 190px); font-weight: 500; line-height: .84; letter-spacing: -.05em;">SANITY<span style="color: #808080;">AI</span></div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: clamp(24px, 4vw, 40px); margin-top: clamp(40px, 6vw, 76px); padding-top: 28px; border-top: 1px solid #26261F;">
+      <div>
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8A8A84; margin: 0 0 16px;">Services</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+          <a href="#systems">Growth systems</a>
+          <a href="#signal">Analytics &amp; attribution</a>
+          <a href="#scale">Ops automation</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8A8A84; margin: 0 0 16px;">Products</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+          <a href="https://dash.sanity.ai/signup" target="_blank" rel="noopener">Steer</a>
+          <a href="https://hint.fyi" target="_blank" rel="noopener">hint.fyi</a>
+          <a href="https://sanity.ai/lab">SanityAI Lab</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #8A8A84; margin: 0 0 16px;">Contact</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+          <a href="https://cal.com/wasim/sanity" target="_blank" rel="noopener">Book a call</a>
+          <a href="mailto:wasim@sanity.ai">wasim@sanity.ai</a>
+          <a href="https://wa.me/971557568805" target="_blank" rel="noopener">+971 55 7568805</a>
+        </div>
+      </div>
+      <div aria-hidden="true" style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(56px, 9vw, 118px); font-weight: 500; line-height: .8; letter-spacing: -.05em; color: #FF7A59; align-self: end; text-align: right;">2026</div>
+    </div>
+    <p style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #6B6B66; margin: clamp(28px, 4vw, 44px) 0 0;">SanityAI · Dubai, United Arab Emirates · Designed and built in-house · © 2026</p>
+  </div>
+</footer>
+
+<!-- ══ INDEX OVERLAY ══ -->
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="true" aria-label="Site index" data-overlay="true" onClick="{{ onOverlayClick }}" style="position: fixed; inset: 0; z-index: 100; background: #C8B6E2; overflow-y: auto;">
+    <div style="max-width: 1440px; margin: 0 auto; padding: 20px clamp(16px, 3vw, 36px) clamp(48px, 7vw, 88px);">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: clamp(28px, 5vw, 60px);">
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;">Index</span>
+        <button type="button" onClick="{{ closeMenu }}" data-overlay-close="true" style="background: #0A0A0A; color: #FAFAF8; border: none; cursor: pointer; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 10px 16px;">Close &times;</button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0 clamp(24px, 4vw, 64px);">
+        <sc-for list="{{ menuItems }}" as="m" hint-placeholder-count="8">
+          <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="display: grid; grid-template-columns: 46px 1fr auto; align-items: center; gap: 16px; border-top: 1px solid rgba(10,10,10,.28); padding: clamp(14px, 2vw, 20px) 0;">
+            <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: .08em; color: rgba(10,10,10,.55);">{{ m.num }}</span>
+            <span style="font-family: 'Schibsted Grotesk', sans-serif; font-size: clamp(20px, 2.6vw, 30px); font-weight: 500; letter-spacing: -.025em;">{{ m.name }}</span>
+            <span style="display: flex; align-items: center; gap: 12px;">
+              <sc-if value="{{ m.soon }}" hint-placeholder-val="{{ false }}">
+                <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(10,10,10,.4); padding: 4px 8px;">Coming soon</span>
+              </sc-if>
+              <span aria-hidden="true" style="width: 44px; height: 30px; background: {{ m.thumb }}; display: inline-block;"></span>
+            </span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1440}}">
+class Component extends DCLogic {
+  state = { menuOpen: false };
+
+  get reduced() {
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  componentDidMount() {
+    this.applyWide();
+    this._onResize = () => this.applyWide();
+    window.addEventListener('resize', this._onResize);
+
+    // nav border/blur after 80px + hero collage + parallax
+    const nav = document.querySelector('[data-nav]');
+    const crops = Array.from(document.querySelectorAll('[data-crop]'));
+    const para = Array.from(document.querySelectorAll('[data-parallax]'));
+    const settle = (c) => {
+      c.style.opacity = '0';
+      c.style.transform = c.style.transform.replace(/translate\([^)]*\)\s*/, '') + ' translate(0px, 0px) scale(.9)';
+    };
+
+    if (this.reduced) {
+      crops.forEach(settle);
+    } else {
+      crops.forEach((c) => { c.dataset.base = c.style.transform; c.style.willChange = 'transform, opacity'; });
+      this._onScroll = () => {
+        const y = window.scrollY || 0;
+        if (nav) {
+          const on = y > 80;
+          nav.style.background = on ? 'rgba(250,250,248,.82)' : 'transparent';
+          nav.style.borderBottomColor = on ? '#E4E4DE' : 'transparent';
+          nav.style.backdropFilter = on ? 'saturate(180%) blur(12px)' : 'none';
+          nav.style.webkitBackdropFilter = nav.style.backdropFilter;
+        }
+        const vh = window.innerHeight || 1;
+        const t = Math.min(1, y / (vh * 0.72));
+        const ease = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        crops.forEach((c) => {
+          const dx = parseFloat(c.dataset.dx || '0') * ease;
+          const dy = parseFloat(c.dataset.dy || '0') * ease;
+          c.style.transform = `translate(${dx}px, ${dy}px) scale(${1 - ease * 0.14}) ${c.dataset.base || ''}`;
+          c.style.opacity = String(Math.max(0, 1 - ease * 1.25));
+        });
+        para.forEach((p) => {
+          const r = p.getBoundingClientRect();
+          const off = (r.top + r.height / 2 - vh / 2) * -parseFloat(p.dataset.parallax || '0');
+          p.style.transform = `translate3d(0, ${off.toFixed(1)}px, 0)`;
+        });
+      };
+      window.addEventListener('scroll', this._onScroll, { passive: true });
+      this._onScroll();
+    }
+
+    // scroll reveals — rAF/rect driven, settled state is the default
+    const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!this.reduced) {
+      reveals.forEach((el, i) => {
+        el.style.transition = `opacity 520ms cubic-bezier(.22,.8,.24,1) ${(i % 4) * 70}ms, transform 520ms cubic-bezier(.22,.8,.24,1) ${(i % 4) * 70}ms`;
+      });
+      const show = (el) => { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; el.dataset.shown = '1'; };
+      const hide = (el) => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; };
+      const vh0 = window.innerHeight || 800;
+      // only pre-hide what starts below the fold, so nothing visible can be stranded
+      reveals.forEach((el) => {
+        if (el.getBoundingClientRect().top > vh0 * 0.9) hide(el); else show(el);
+      });
+      this._checkReveals = () => {
+        const vh = window.innerHeight || 800;
+        reveals.forEach((el) => {
+          if (el.dataset.shown === '1') return;
+          if (el.getBoundingClientRect().top < vh * 0.88) show(el);
+        });
+      };
+      window.addEventListener('scroll', this._checkReveals, { passive: true });
+      window.addEventListener('resize', this._checkReveals);
+      this._checkReveals();
+      // safety pass: nothing stays hidden if the scroll hook ever fails
+      this._revealSafety = setTimeout(() => reveals.forEach(show), 1400);
+    }
+
+    // count-ups — rect driven, numbers are already in the DOM as fallback
+    const nums = Array.from(document.querySelectorAll('[data-count]'));
+    this._checkCounts = () => {
+      const vh = window.innerHeight || 800;
+      nums.forEach((n) => {
+        if (n.dataset.ran === '1') return;
+        const r = n.getBoundingClientRect();
+        if (r.top < vh * 0.85 && r.bottom > 0) { n.dataset.ran = '1'; this.runCount(n); }
+      });
+    };
+    window.addEventListener('scroll', this._checkCounts, { passive: true });
+    this._checkCounts();
+
+    this._onKey = (e) => {
+      if (e.key === 'Escape' && this.state.menuOpen) { this.setState({ menuOpen: false }); return; }
+      if (e.key === 'Tab' && this.state.menuOpen) this.trap(e);
+    };
+    document.addEventListener('keydown', this._onKey);
+  }
+
+  componentDidUpdate(_p, prev) {
+    if (this.state.menuOpen && !prev.menuOpen) {
+      document.body.style.overflow = 'hidden';
+      const btn = document.querySelector('[data-overlay-close]');
+      if (btn) btn.focus();
+    } else if (!this.state.menuOpen && prev.menuOpen) {
+      document.body.style.overflow = '';
+      const t = document.querySelector('[data-navlink]');
+      if (t) t.focus();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._checkCounts) window.removeEventListener('scroll', this._checkCounts);
+    document.removeEventListener('keydown', this._onKey);
+    if (this._checkReveals) { window.removeEventListener('scroll', this._checkReveals); window.removeEventListener('resize', this._checkReveals); }
+    if (this._revealSafety) clearTimeout(this._revealSafety);
+    if (this._countObs) this._countObs.disconnect();
+    document.body.style.overflow = '';
+  }
+
+  applyWide() {
+    const wide = window.innerWidth >= 860;
+    document.querySelectorAll('[data-wide]').forEach((el) => { el.style.display = wide ? 'inline-flex' : 'none'; });
+    const grid = document.querySelector('[data-hero-grid]');
+    if (grid) grid.style.gridTemplateColumns = window.innerWidth >= 1024 ? '1.35fr 1fr' : 'minmax(0, 1fr)';
+    document.querySelectorAll('[data-cols]').forEach((el) => {
+      el.style.gridTemplateColumns = window.innerWidth >= 900 ? 'repeat(2, minmax(0, 1fr))' : 'minmax(0, 1fr)';
+    });
+  }
+
+  runCount(el) {
+    const to = parseFloat(el.dataset.count || '0');
+    const pre = el.dataset.prefix || '';
+    const suf = el.dataset.suffix || '';
+    const dec = to % 1 !== 0 ? 1 : 0;
+    if (this.reduced) { el.textContent = pre + to.toFixed(dec) + suf; return; }
+    const dur = 1100, t0 = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = pre + (to * e).toFixed(dec) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  trap(e) {
+    const root = document.querySelector('[data-overlay]');
+    if (!root) return;
+    const f = Array.from(root.querySelectorAll('a[href], button')).filter((n) => n.offsetParent !== null);
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+
+  renderVals() {
+    return {
+      menuOpen: this.state.menuOpen,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      onOverlayClick: (e) => { if (e.target === e.currentTarget) this.setState({ menuOpen: false }); },
+      stats: [
+        { shown: '11+', to: 11, prefix: '', suffix: '+', label: 'Years across the GCC', caption: 'AXA Insurance · AD Ports Group · IFFCO · Harper\u2019s Bazaar' },
+        { shown: '184', to: 184, prefix: '', suffix: '', label: 'Workflows in production', caption: 'Enrichment, routing, scoring, lifecycle, reporting' },
+        { shown: '3', to: 3, prefix: '', suffix: '', label: 'Ways to engage', caption: 'Two-week audit \u00b7 full build \u00b7 ongoing retainer' },
+      ],
+      quotes: [
+        { text: 'Nobody has an attribution problem. They have a plumbing problem that shows up in the attribution report.', name: 'Wasim Ullah', role: 'Founder, SanityAI', dot: '#FF7A59' },
+        { text: 'AI referrals are barely one percent of traffic and convert better than everything except paid search. That is not a rounding error. That is a channel.', name: 'From the 2026 data', role: 'Similarweb · Conductor · Adobe', dot: '#A8C3A5' },
+      ],
+      menuItems: [
+        { num: '01', name: 'Growth systems', href: '#systems', soon: false, thumb: '#FF7A59' },
+        { num: '02', name: 'Analytics & attribution', href: '#signal', soon: false, thumb: '#0A0A0A' },
+        { num: '03', name: 'Evidence', href: '#data', soon: false, thumb: '#A8C3A5' },
+        { num: '04', name: 'Ops automation', href: '#scale', soon: false, thumb: '#0A0A0A' },
+        { num: '05', name: 'Steer', href: 'https://dash.sanity.ai/signup', soon: false, thumb: '#FF7A59' },
+        { num: '06', name: 'hint.fyi', href: 'https://hint.fyi', soon: false, thumb: '#0A0A0A' },
+        { num: '07', name: 'SanityAI Lab', href: 'https://sanity.ai/lab', soon: false, thumb: '#A8C3A5' },
+        { num: '08', name: 'Journal', href: '#top', soon: true, thumb: '#0A0A0A' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
