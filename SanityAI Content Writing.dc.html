@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0a0a0a"></rect><rect x="35" y="35" width="30" height="30" fill="#e8541e"></rect></svg></template>
+<title>SanityAI - Bespoke content writing</title>
+<meta name="description" content="Bespoke content writing from SanityAI — long-form, thought leadership, and website copy written by people who understand your product and your funnel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #fbfbfa; font-family: "Instrument Sans", -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #777; }
+</style>
+</helmet>
+
+<div style="background: #fbfbfa; color: #141414;">
+
+  <!-- Nav -->
+  <nav style="position: sticky; top: 0; z-index: 50; background: rgba(245,245,242,.82); backdrop-filter: saturate(180%) blur(12px); -webkit-backdrop-filter: saturate(180%) blur(12px); border-bottom: 1px solid rgba(10,10,10,.06);">
+   <div style="max-width: 1040px; margin: 0 auto; padding: 14px clamp(20px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <a href="index.html" style="display: flex; align-items: center;"><img src="uploads/logoblack.png" alt="SanityAI" style="height: 13px; display: block;"></a>
+    <div style="display: flex; gap: clamp(14px, 2.5vw, 28px); font-size: 13px; color: #6e6e68;">
+      <a href="index.html#services">Services</a>
+      <a href="#writing-services">Content writing</a>
+      <a href="#plans">Plans</a>
+    </div>
+    <a href="https://cal.com/wasim/sanity" target="_blank" style="background: #0a0a0a; color: #f5f5f2; font-size: 13px; font-weight: 500; padding: 8px 18px; border-radius: 999px; display: inline-flex; align-items: center; white-space: nowrap; flex-shrink: 0;">Book a call</a>
+   </div>
+  </nav>
+
+  <!-- Hero -->
+  <section data-screen-label="Hero" style="max-width: 1040px; margin: 0 auto; padding: clamp(48px, 8vw, 88px) clamp(20px, 4vw, 40px) clamp(40px, 6vw, 64px);">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #9a9a94; margin-bottom: 18px;"><span style="width: 7px; height: 7px; background: #e8541e; display: inline-block;"></span>CONTENT WRITING</div>
+    <h1 style="font-size: clamp(32px, 5vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -.03em; margin: 0 0 22px; max-width: 680px;">Bespoke content, written by people who understand your funnel.</h1>
+    <p style="font-size: 16px; line-height: 1.6; color: #6e6e68; margin: 0 0 30px; max-width: 480px; text-wrap: pretty;">No templates, no recycled prompts. Every piece is researched, structured, and edited against your positioning, your buyers, and what's actually converting — then wired into the automation system, not handed off as a PDF.</p>
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+      <a href="#plans" style="background: #0a0a0a; color: #f5f5f2; font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 999px; display: inline-flex; gap: 8px; align-items: center;">See engagement options <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- What we write -->
+  <div id="writing-services"></div>
+  <section data-screen-label="Formats" style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px) clamp(56px, 8vw, 88px);">
+    <h2 style="font-size: 24px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 28px;">What we write.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px;">
+      <sc-for list="{{ formats }}" as="f" hint-placeholder-count="6">
+        <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 12px; padding: 22px 22px 24px;">
+          <div style="font-size: 16px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 8px;">{{ f.title }}</div>
+          <div style="font-size: 13.5px; line-height: 1.6; color: #6e6e68; text-wrap: pretty;">{{ f.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section data-screen-label="Process" style="background: #f0f0eb;">
+    <div style="max-width: 1040px; margin: 0 auto; padding: clamp(48px, 8vw, 80px) clamp(20px, 4vw, 40px);">
+      <h2 style="font-size: 24px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 28px;">How a piece gets made.</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 14px;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+          <div style="background: #ffffff; border: 1px solid #e4e4df; border-radius: 10px; padding: 18px 20px;">
+            <div style="width: 22px; height: 22px; border-radius: 50%; background: #0a0a0a; color: #f5f5f2; font-size: 11px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px;">{{ s.n }}</div>
+            <div style="font-size: 14px; font-weight: 600; letter-spacing: -.01em; margin-bottom: 5px;">{{ s.title }}</div>
+            <div style="font-size: 13px; line-height: 1.55; color: #6e6e68;">{{ s.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="plans" data-screen-label="Plans" style="max-width: 1040px; margin: 0 auto; padding: clamp(56px, 8vw, 88px) clamp(20px, 4vw, 40px);">
+    <h2 style="font-size: 24px; font-weight: 600; letter-spacing: -.02em; margin: 0 0 28px;">Engagement options.</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: clamp(12px, 1.6vw, 20px); align-items: stretch;">
+      <sc-for list="{{ plans }}" as="plan" hint-placeholder-count="3">
+        <div style="border: 1px solid {{ plan.border }}; background: {{ plan.bg }}; color: {{ plan.fg }}; border-radius: 12px; padding: 26px 24px 28px; display: flex; flex-direction: column;">
+          <div style="font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: {{ plan.muted }}; margin-bottom: 14px;">{{ plan.label }}</div>
+          <div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 2px;">{{ plan.price }}</div>
+          <div style="font-size: 12px; color: {{ plan.muted }}; margin-bottom: 18px;">{{ plan.per }}</div>
+          <div style="font-size: 13px; line-height: 1.6; color: {{ plan.muted }}; margin-bottom: 20px; text-wrap: pretty;">{{ plan.desc }}</div>
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px;">
+            <sc-for list="{{ plan.features }}" as="f" hint-placeholder-count="4">
+              <div style="font-size: 13px; display: flex; gap: 10px; align-items: baseline;"><span style="color: #e8541e;">—</span><span>{{ f }}</span></div>
+            </sc-for>
+          </div>
+          <a href="https://cal.com/wasim/sanity" target="_blank" style="margin-top: auto; text-align: center; font-size: 13px; font-weight: 500; padding: 10px 0; border-radius: 999px; background: {{ plan.btnBg }}; color: {{ plan.btnFg }}; border: 1px solid {{ plan.btnBorder }};">{{ plan.cta }}</a>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section data-screen-label="FAQ" style="max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px) clamp(64px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(28px, 5vw, 64px); align-items: start;">
+    <h2 style="font-size: 24px; font-weight: 600; letter-spacing: -.02em; line-height: 1.2; margin: 0;">Questions, answered.</h2>
+    <div>
+      <sc-for list="{{ faqs }}" as="faq" hint-placeholder-count="4">
+        <div style="border-top: 1px solid #e4e4df;">
+          <button onClick="{{ faq.toggle }}" style="all: unset; box-sizing: border-box; cursor: pointer; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 0; font-size: 14.5px; font-weight: 500; letter-spacing: -.01em; font-family: inherit;">
+            <span>{{ faq.q }}</span>
+            <span style="color: #9a9a94; font-weight: 400;">{{ faq.mark }}</span>
+          </button>
+          <sc-if value="{{ faq.open }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size: 13px; line-height: 1.65; color: #6e6e68; padding: 0 40px 20px 0; max-width: 520px;">{{ faq.a }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- Closer -->
+  <section data-screen-label="CTA" style="background: #0a0a0a; color: #f2f2ee; position: relative; overflow: hidden;">
+    <div style="position: relative; max-width: 1040px; margin: 0 auto; padding: clamp(56px, 9vw, 96px) clamp(20px, 4vw, 40px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px, 5vw, 64px); align-items: center;">
+      <h2 style="font-size: 30px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; margin: 0;">Send us a brief. We'll send back a draft that sounds like you.</h2>
+      <div>
+        <p style="font-size: 14px; line-height: 1.6; color: #a5a59f; margin: 0 0 24px; max-width: 380px; text-wrap: pretty;">Tell us the format, the audience, and where it needs to sit in your funnel — we'll scope the rest on the call.</p>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <a href="https://cal.com/wasim/sanity" target="_blank" style="background: #f2f2ee; color: #0a0a0a; font-size: 14px; font-weight: 500; padding: 11px 22px; border-radius: 999px; display: inline-flex; gap: 8px;">Book a call <span>→</span></a>
+          <a href="mailto:wasim@sanity.ai" style="font-size: 13px; color: #a5a59f;">wasim@sanity.ai</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer data-screen-label="Footer" style="max-width: 1040px; margin: 0 auto; padding: 48px clamp(20px, 4vw, 40px) 32px; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+    <img src="uploads/logoblack.png" alt="SanityAI" style="height: 11px; display: block;">
+    <span style="font-size: 12px; color: #9a9a94;">© SanityAI 2026</span>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openFaq: 0 };
+  renderVals() {
+    const formats = [
+      { title: 'Thought leadership & LinkedIn ghostwriting', desc: 'Founder-voice posts and articles built from your real wins, not generic takes — written to sound like you on your worst day.' },
+      { title: 'SEO & comparison pages', desc: 'Programmatic and hand-written pages targeting the exact terms your buyers search before they ever fill out a form.' },
+      { title: 'Case studies & customer stories', desc: 'Structured interviews turned into proof — pulled straight from your CRM, not written from a template.' },
+      { title: 'Website & landing page copy', desc: 'Copy for the pages your paid and organic traffic actually lands on, written to convert, not just read well.' },
+      { title: 'Email & lifecycle copy', desc: 'Sequences and newsletters that fit inside the automation you already have running.' },
+      { title: 'Whitepapers & long-form guides', desc: 'Researched, cited, and designed lead magnets for the top of a funnel that needs to earn trust before a call.' },
+    ];
+    const steps = [
+      { n: '1', title: 'Brief', desc: 'A short call or doc on audience, goal, and where the piece lives in your funnel.' },
+      { n: '2', title: 'Outline', desc: 'Structure and angle signed off before a word of the draft gets written.' },
+      { n: '3', title: 'Draft', desc: 'Written by a senior writer, checked against your positioning and voice.' },
+      { n: '4', title: 'Revise & ship', desc: 'One structured revision round, then published or handed off — wired into distribution if you want it.' },
+    ];
+    const dark = { border: '#0a0a0a', bg: '#0a0a0a', fg: '#f2f2ee', muted: '#8f8f89', btnBg: '#f2f2ee', btnFg: '#0a0a0a', btnBorder: '#f2f2ee' };
+    const light = { border: '#e4e4df', bg: '#ffffff', fg: '#141414', muted: '#82827c', btnBg: 'transparent', btnFg: '#141414', btnBorder: '#c9c9c4' };
+    const plans = [
+      { ...light, label: 'Per piece', price: 'Scoped per brief', per: 'one-off, no minimum', desc: 'Single pieces — a case study, a landing page, a set of LinkedIn posts — quoted after the brief call.', features: ['1 senior writer assigned', 'One revision round', 'Delivered in your CMS or as a doc'], cta: 'Get a quote' },
+      { ...dark, label: 'Content retainer', price: 'Monthly', per: '3-month minimum · billed monthly', desc: 'A standing cadence of content mapped to your funnel — blog, LinkedIn, email — planned and shipped every month.', features: ['Monthly content calendar', 'Multiple formats covered', 'Wired into your existing automation', 'Async Slack channel'], cta: 'Book a call' },
+      { ...light, label: 'Add-on', price: 'Bundled', per: 'with a Build or Retainer engagement', desc: 'Content writing folded into a broader automation engagement — one team, one invoice.', features: ['Shares your automation pod', 'Priced into the existing scope'], cta: 'Ask on a call' },
+    ];
+    const faqData = [
+      { q: 'Do you write in-house or outsource?', a: 'In-house. The same senior writers work your account every time — no rotating freelancer pool.' },
+      { q: 'How do you learn our voice?', a: 'From your existing best content, customer calls, and a short voice brief — then we check every draft against it.' },
+      { q: 'Can this be bundled with automation work?', a: 'Yes — most clients fold content into a Build or Retainer engagement so it plugs straight into the system we\'re already running.' },
+      { q: 'What\'s the minimum commitment?', a: 'Per-piece work has no minimum. Retainers run a 3-month minimum, billed monthly.' },
+    ];
+    const faqs = faqData.map((f, i) => ({
+      ...f,
+      open: this.state.openFaq === i,
+      mark: this.state.openFaq === i ? '−' : '+',
+      toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })),
+    }));
+    return { formats, steps, plans, faqs };
+  }
+}
+
+</script>
+</body>
+</html>
